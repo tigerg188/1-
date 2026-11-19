@@ -1,0 +1,256 @@
+{
+  "partA_forbiddenWords": {
+    "passed": true,
+    "hitCount": 0,
+    "hits": [],
+    "scannedFilesCount": 58
+  },
+  "partB_projectIdentifiers": {
+    "tested": true,
+    "passed": false,
+    "extractedTotal": 1012,
+    "filteredByWhitelistCount": 28,
+    "auditedIdentifierCount": 984,
+    "whitelistFile": "config/format_whitelist.json",
+    "whitelistAuditErrors": [],
+    "scannedFilesCount": 40,
+    "scanScope": [
+      "src",
+      "server",
+      "config",
+      "acceptance",
+      "server.ts",
+      "index.html",
+      "package.json"
+    ],
+    "excludedDirs": [
+      "node_modules",
+      "data",
+      "snapshots",
+      "dist",
+      ".git",
+      "acceptance/raw"
+    ],
+    "hitCount": 31,
+    "hits": [
+      {
+        "file": "acceptance/runner.ts",
+        "line": 1384,
+        "identifier": "execution_state.json",
+        "sourceType": "file_basename",
+        "text": "const execFile = path.join(WORKSPACES_DIR, activeHash, 'execution_state.json');"
+      },
+      {
+        "file": "acceptance/runner.ts",
+        "line": 1384,
+        "identifier": "execution_state",
+        "sourceType": "file_basename",
+        "text": "const execFile = path.join(WORKSPACES_DIR, activeHash, 'execution_state.json');"
+      },
+      {
+        "file": "acceptance/runner.ts",
+        "line": 1388,
+        "identifier": "artifacts",
+        "sourceType": "dir_name",
+        "text": "const hasArtifacts = Array.isArray(exec.artifacts) && exec.artifacts.length > 0;"
+      },
+      {
+        "file": "acceptance/runner.ts",
+        "line": 1391,
+        "identifier": "artifacts",
+        "sourceType": "dir_name",
+        "text": "for (const art of exec.artifacts) {"
+      },
+      {
+        "file": "acceptance/runner.ts",
+        "line": 1406,
+        "identifier": "artifacts",
+        "sourceType": "dir_name",
+        "text": "a11Details = `执行已完成且磁盘 SHA256 一致：消耗 ${exec.tokensUsed}/${exec.tokenBudget} tokens，产出 ${exec.artifacts.length} 个文件`;"
+      },
+      {
+        "file": "acceptance/runner.ts",
+        "line": 1461,
+        "identifier": "execution_state.json",
+        "sourceType": "file_basename",
+        "text": "const execFile = path.join(WORKSPACES_DIR, activeHash, 'execution_state.json');"
+      },
+      {
+        "file": "acceptance/runner.ts",
+        "line": 1461,
+        "identifier": "execution_state",
+        "sourceType": "file_basename",
+        "text": "const execFile = path.join(WORKSPACES_DIR, activeHash, 'execution_state.json');"
+      },
+      {
+        "file": "server/execute.ts",
+        "line": 46,
+        "identifier": "artifacts",
+        "sourceType": "dir_name",
+        "text": "artifacts: ArtifactMeta[];"
+      },
+      {
+        "file": "server/execute.ts",
+        "line": 61,
+        "identifier": "execution_state.json",
+        "sourceType": "file_basename",
+        "text": "const stateFile = path.join(WORKSPACES_DIR, workspaceHash, 'execution_state.json');"
+      },
+      {
+        "file": "server/execute.ts",
+        "line": 61,
+        "identifier": "execution_state",
+        "sourceType": "file_basename",
+        "text": "const stateFile = path.join(WORKSPACES_DIR, workspaceHash, 'execution_state.json');"
+      },
+      {
+        "file": "server/execute.ts",
+        "line": 82,
+        "identifier": "execution_state.json",
+        "sourceType": "file_basename",
+        "text": "const stateFile = path.join(workspaceDir, 'execution_state.json');"
+      },
+      {
+        "file": "server/execute.ts",
+        "line": 82,
+        "identifier": "execution_state",
+        "sourceType": "file_basename",
+        "text": "const stateFile = path.join(workspaceDir, 'execution_state.json');"
+      },
+      {
+        "file": "server/execute.ts",
+        "line": 91,
+        "identifier": "artifacts",
+        "sourceType": "dir_name",
+        "text": "const artifactPath = path.join(WORKSPACES_DIR, workspaceHash, 'artifacts', safeName);"
+      },
+      {
+        "file": "server/execute.ts",
+        "line": 114,
+        "identifier": "step_artifacts",
+        "sourceType": "dir_name",
+        "text": "const stepsArtifactsDir = path.join(workspaceDir, 'step_artifacts');"
+      },
+      {
+        "file": "server/execute.ts",
+        "line": 123,
+        "identifier": "artifacts",
+        "sourceType": "dir_name",
+        "text": "artifacts: [...initialState.artifacts],"
+      },
+      {
+        "file": "server/execute.ts",
+        "line": 322,
+        "identifier": "artifacts",
+        "sourceType": "dir_name",
+        "text": "const artifactsDir = path.join(workspaceDir, 'artifacts');"
+      },
+      {
+        "file": "server/execute.ts",
+        "line": 334,
+        "identifier": "artifacts",
+        "sourceType": "dir_name",
+        "text": "relPath: `artifacts/${outputArtifactName}`,"
+      },
+      {
+        "file": "server/execute.ts",
+        "line": 340,
+        "identifier": "artifacts",
+        "sourceType": "dir_name",
+        "text": "state.artifacts.push(artifactMeta);"
+      },
+      {
+        "file": "server/execute.ts",
+        "line": 416,
+        "identifier": "step_artifacts",
+        "sourceType": "dir_name",
+        "text": "const stepsArtifactsDir = path.join(workspaceDir, 'step_artifacts');"
+      },
+      {
+        "file": "server/execute.ts",
+        "line": 440,
+        "identifier": "artifacts",
+        "sourceType": "dir_name",
+        "text": "artifacts: [],"
+      },
+      {
+        "file": "server/report.ts",
+        "line": 45,
+        "identifier": "artifacts",
+        "sourceType": "dir_name",
+        "text": "artifacts: execState?.artifacts || [],"
+      },
+      {
+        "file": "server/report.ts",
+        "line": 98,
+        "identifier": "artifacts",
+        "sourceType": "dir_name",
+        "text": "## 3. 任务执行与交付物追溯 (Execution Trace & Artifacts)"
+      },
+      {
+        "file": "server/report.ts",
+        "line": 102,
+        "identifier": "artifacts",
+        "sourceType": "dir_name",
+        "text": "- **交付物列表 (Artifacts with SHA256)**:"
+      },
+      {
+        "file": "server/report.ts",
+        "line": 104,
+        "identifier": "artifacts",
+        "sourceType": "dir_name",
+        "text": "data.executionTrace.artifacts.length === 0"
+      },
+      {
+        "file": "server/report.ts",
+        "line": 106,
+        "identifier": "artifacts",
+        "sourceType": "dir_name",
+        "text": ": data.executionTrace.artifacts"
+      },
+      {
+        "file": "server/verify.ts",
+        "line": 111,
+        "identifier": "artifacts",
+        "sourceType": "dir_name",
+        "text": "if (!execState || execState.artifacts.length === 0) {"
+      },
+      {
+        "file": "server/verify.ts",
+        "line": 115,
+        "identifier": "artifacts",
+        "sourceType": "dir_name",
+        "text": "for (const art of execState.artifacts) {"
+      },
+      {
+        "file": "server/verify.ts",
+        "line": 196,
+        "identifier": "artifacts",
+        "sourceType": "dir_name",
+        "text": "artifacts_meta: execState?.artifacts || [],"
+      },
+      {
+        "file": "src/pages/ExecutePage.tsx",
+        "line": 483,
+        "identifier": "artifacts",
+        "sourceType": "dir_name",
+        "text": "{execState && execState.artifacts.length > 0 && ("
+      },
+      {
+        "file": "src/pages/ExecutePage.tsx",
+        "line": 491,
+        "identifier": "artifacts",
+        "sourceType": "dir_name",
+        "text": "{execState.artifacts.map((art) => ("
+      },
+      {
+        "file": "src/types.ts",
+        "line": 341,
+        "identifier": "artifacts",
+        "sourceType": "dir_name",
+        "text": "artifacts: ArtifactMeta[];"
+      }
+    ],
+    "message": "项目标识符审计未通过：白名单自审异常 0 项，源码命中 31 处"
+  }
+}

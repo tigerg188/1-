@@ -1,0 +1,12 @@
+{
+  "threshold": 0,
+  "scannedCodeFilesCount": 32,
+  "r1FindingsDocExists": true,
+  "r1ItemsTotalInDoc": 35,
+  "r1SignaturesChecked": 19,
+  "staticFakePatternHitCount": 0,
+  "staticHits": [],
+  "r1ResidualCount": 0,
+  "r1Residuals": [],
+  "totalHitCount": 0
+}

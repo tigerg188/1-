@@ -1,0 +1,31 @@
+{
+  "totalUnitCandidates": 17,
+  "classifiedNodesCount": 17,
+  "unclassifiedFiles": [
+    ".gitignore",
+    "LICENSE",
+    "README.md",
+    "docs/images/html-report-content.png",
+    "docs/images/html-report-cover.png",
+    "docs/images/html-report-summary.png",
+    "docs/images/report-chapter-20261025.png",
+    "docs/images/report-cover-20261025.png",
+    "docs/images/report-waterfall-20261025.png",
+    "release-manifest.json",
+    "scripts/validate_release.py"
+  ],
+  "roleCounts": {
+    "entry_router": 2,
+    "specialist": 15,
+    "delivery": 0,
+    "resource": 0,
+    "script": 0,
+    "config": 0,
+    "doc": 0,
+    "unknown": 0
+  },
+  "invalidEdgesCount": 0,
+  "allEdgeEndpointsExist": true,
+  "modelUnderstoodCount": 17,
+  "ruleFallbackCount": 0
+}

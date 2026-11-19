@@ -1,0 +1,463 @@
+{
+  "workspaceHash": "647963bd77ef97586c4b6665ad174429c9fac3fa2f1ab3faed941f45cc61b961",
+  "updatedAt": "2026-11-13T07:32:14.487Z",
+  "packageVerdict": "未知",
+  "unitVerdicts": [
+    {
+      "unitPath": "/",
+      "verdict": "未知",
+      "requiredCapabilities": [
+        "web_search",
+        "url_fetch",
+        "code_execution"
+      ],
+      "blockingCapability": "web_search",
+      "reason": "来源：代码规则（非模型理解）。所需能力 web_search 状态未知，无法判定可移植性",
+      "evidenceTags": [
+        {
+          "type": "evidence",
+          "filePath": "README.md",
+          "lineStart": 3,
+          "lineEnd": 3,
+          "quote": "一套由总入口统筹、13 个专项 Skill 协同执行的中文行业与企业研究工作流。"
+        }
+      ]
+    },
+    {
+      "unitPath": "skills/hehe-business-model",
+      "verdict": "未知",
+      "requiredCapabilities": [
+        "web_search",
+        "code_execution"
+      ],
+      "blockingCapability": "web_search",
+      "reason": "来源：代码规则（非模型理解）。所需能力 web_search 状态未知，无法判定可移植性",
+      "evidenceTags": [
+        {
+          "type": "evidence",
+          "filePath": "skills/hehe-business-model/SKILL.md",
+          "lineStart": 5,
+          "lineEnd": 5,
+          "quote": "盒子原创行业研究 Skill 组合中的商业模式分析专项。"
+        }
+      ]
+    },
+    {
+      "unitPath": "skills/hehe-company-profile",
+      "verdict": "未知",
+      "requiredCapabilities": [
+        "web_search",
+        "code_execution"
+      ],
+      "blockingCapability": "web_search",
+      "reason": "来源：代码规则（非模型理解）。所需能力 web_search 状态未知，无法判定可移植性",
+      "evidenceTags": [
+        {
+          "type": "evidence",
+          "filePath": "skills/hehe-company-profile/SKILL.md",
+          "lineStart": 5,
+          "lineEnd": 5,
+          "quote": "建立一家企业或经营主体的可追溯经营画像"
+        }
+      ]
+    },
+    {
+      "unitPath": "skills/hehe-competitive-landscape",
+      "verdict": "未知",
+      "requiredCapabilities": [
+        "web_search",
+        "code_execution"
+      ],
+      "blockingCapability": "web_search",
+      "reason": "来源：代码规则（非模型理解）。所需能力 web_search 状态未知，无法判定可移植性",
+      "evidenceTags": [
+        {
+          "type": "evidence",
+          "filePath": "skills/hehe-competitive-landscape/SKILL.md",
+          "lineStart": 5,
+          "lineEnd": 5,
+          "quote": "行业研究梳理参与企业、份额、集中度及变化，按共同维度横向比较核心企业"
+        }
+      ]
+    },
+    {
+      "unitPath": "skills/hehe-financial-analysis",
+      "verdict": "未知",
+      "requiredCapabilities": [
+        "web_search",
+        "code_execution"
+      ],
+      "blockingCapability": "web_search",
+      "reason": "来源：代码规则（非模型理解）。所需能力 web_search 状态未知，无法判定可移植性",
+      "evidenceTags": [
+        {
+          "type": "evidence",
+          "filePath": "skills/hehe-financial-analysis/SKILL.md",
+          "lineStart": 5,
+          "lineEnd": 6,
+          "quote": "重构并勾稽利润表、资产负债表和现金流量表，诊断增长、盈利、现金转换、资产质量、资本效率、债务与会计质量"
+        }
+      ]
+    },
+    {
+      "unitPath": "skills/hehe-governance-capital-allocation",
+      "verdict": "未知",
+      "requiredCapabilities": [
+        "web_search",
+        "code_execution"
+      ],
+      "blockingCapability": "web_search",
+      "reason": "来源：代码规则（非模型理解）。所需能力 web_search 状态未知，无法判定可移植性",
+      "evidenceTags": [
+        {
+          "type": "evidence",
+          "filePath": "skills/hehe-governance-capital-allocation/SKILL.md",
+          "lineStart": 5,
+          "lineEnd": 6,
+          "quote": "判断公司的实际控制权与决策机制、管理层和股东激励、少数股东保护、关联交易及资本配置历史质量"
+        }
+      ]
+    },
+    {
+      "unitPath": "skills/hehe-industry-chain-map",
+      "verdict": "未知",
+      "requiredCapabilities": [
+        "web_search",
+        "code_execution"
+      ],
+      "blockingCapability": "web_search",
+      "reason": "来源：代码规则（非模型理解）。所需能力 web_search 状态未知，无法判定可移植性",
+      "evidenceTags": [
+        {
+          "type": "evidence",
+          "filePath": "skills/hehe-industry-chain-map/SKILL.md",
+          "lineStart": 5,
+          "lineEnd": 5,
+          "quote": "梳理行业或企业所在链条的功能、角色、上下游关系与代表企业，分析成本、利润、瓶颈和技术替代"
+        }
+      ]
+    },
+    {
+      "unitPath": "skills/hehe-industry-drivers",
+      "verdict": "未知",
+      "requiredCapabilities": [
+        "web_search",
+        "code_execution"
+      ],
+      "blockingCapability": "web_search",
+      "reason": "来源：代码规则（非模型理解）。所需能力 web_search 状态未知，无法判定可移植性",
+      "evidenceTags": [
+        {
+          "type": "evidence",
+          "filePath": "skills/hehe-industry-drivers/SKILL.md",
+          "lineStart": 5,
+          "lineEnd": 6,
+          "quote": "用于解释行业收入、销量、价格、利润、渗透率、供给或结构变化为何发生：先拆解需要解释的结果，再识别并核查需求、供给、价格与成本、技术、渠道、政策制度等驱动"
+        }
+      ]
+    },
+    {
+      "unitPath": "skills/hehe-industry-pain-points",
+      "verdict": "未知",
+      "requiredCapabilities": [
+        "web_search",
+        "code_execution"
+      ],
+      "blockingCapability": "web_search",
+      "reason": "来源：代码规则（非模型理解）。所需能力 web_search 状态未知，无法判定可移植性",
+      "evidenceTags": [
+        {
+          "type": "evidence",
+          "filePath": "skills/hehe-industry-pain-points/SKILL.md",
+          "lineStart": 4,
+          "lineEnd": 6,
+          "quote": "辨析不同参与者在明确任务、流程或产业节点上反复、持续，或在关键时点承担的时间、成本、收入、结果、风险或责任损失"
+        }
+      ]
+    },
+    {
+      "unitPath": "skills/hehe-industry-researcher",
+      "verdict": "未知",
+      "requiredCapabilities": [
+        "web_search",
+        "code_execution"
+      ],
+      "blockingCapability": "web_search",
+      "reason": "来源：代码规则（非模型理解）。所需能力 web_search 状态未知，无法判定可移植性",
+      "evidenceTags": [
+        {
+          "type": "evidence",
+          "filePath": "skills/hehe-industry-researcher/SKILL.md",
+          "lineStart": 4,
+          "lineEnd": 6,
+          "quote": "负责把研究开题、公开信息搜索、材料审核、行业或企业分析、Markdown 成稿及 HTML 报告交付整合成一条完整路线"
+        }
+      ]
+    },
+    {
+      "unitPath": "skills/hehe-investment-logic",
+      "verdict": "未知",
+      "requiredCapabilities": [
+        "web_search",
+        "code_execution"
+      ],
+      "blockingCapability": "web_search",
+      "reason": "来源：代码规则（非模型理解）。所需能力 web_search 状态未知，无法判定可移植性",
+      "evidenceTags": [
+        {
+          "type": "evidence",
+          "filePath": "skills/hehe-investment-logic/SKILL.md",
+          "lineStart": 4,
+          "lineEnd": 8,
+          "quote": "分析行业机会、企业、项目、上市证券或具体交易是否值得投资、是否实际可进入"
+        }
+      ]
+    },
+    {
+      "unitPath": "skills/hehe-market-sizing",
+      "verdict": "未知",
+      "requiredCapabilities": [
+        "web_search",
+        "code_execution"
+      ],
+      "blockingCapability": "web_search",
+      "reason": "来源：代码规则（非模型理解）。所需能力 web_search 状态未知，无法判定可移植性",
+      "evidenceTags": [
+        {
+          "type": "evidence",
+          "filePath": "skills/hehe-market-sizing/SKILL.md",
+          "lineStart": 4,
+          "lineEnd": 6,
+          "quote": "按问题选择市场机会、交易经营、采购预算等方法，提供公式、参数、情景与敏感性分析"
+        }
+      ]
+    },
+    {
+      "unitPath": "skills/hehe-pest-analysis",
+      "verdict": "未知",
+      "requiredCapabilities": [
+        "web_search",
+        "code_execution"
+      ],
+      "blockingCapability": "web_search",
+      "reason": "来源：代码规则（非模型理解）。所需能力 web_search 状态未知，无法判定可移植性",
+      "evidenceTags": [
+        {
+          "type": "evidence",
+          "filePath": "skills/hehe-pest-analysis/SKILL.md",
+          "lineStart": 4,
+          "lineEnd": 4,
+          "quote": "盒子原创行业研究 Skill 组合中的 PEST 外部环境分析专项。"
+        }
+      ]
+    },
+    {
+      "unitPath": "skills/hehe-report-presentation",
+      "verdict": "未知",
+      "requiredCapabilities": [
+        "code_execution"
+      ],
+      "blockingCapability": "code_execution",
+      "reason": "来源：代码规则（非模型理解）。所需能力 code_execution 状态未知，无法判定可移植性",
+      "evidenceTags": [
+        {
+          "type": "evidence",
+          "filePath": "skills/hehe-report-presentation/SKILL.md",
+          "lineStart": 4,
+          "lineEnd": 4,
+          "quote": "将已有商业计划书、行业与企业研究报告、用户研究报告或分页脚本制作成专业报告。"
+        }
+      ]
+    },
+    {
+      "unitPath": "skills/hehe-report-writing",
+      "verdict": "未知",
+      "requiredCapabilities": [
+        "code_execution"
+      ],
+      "blockingCapability": "code_execution",
+      "reason": "来源：代码规则（非模型理解）。所需能力 code_execution 状态未知，无法判定可移植性",
+      "evidenceTags": [
+        {
+          "type": "evidence",
+          "filePath": "skills/hehe-report-writing/SKILL.md",
+          "lineStart": 4,
+          "lineEnd": 4,
+          "quote": "专业研究与咨询文稿写作、润色、审校及分页编排。"
+        }
+      ]
+    },
+    {
+      "unitPath": "skills/hehe-trend-analysis",
+      "verdict": "未知",
+      "requiredCapabilities": [
+        "web_search",
+        "code_execution"
+      ],
+      "blockingCapability": "web_search",
+      "reason": "来源：代码规则（非模型理解）。所需能力 web_search 状态未知，无法判定可移植性",
+      "evidenceTags": [
+        {
+          "type": "evidence",
+          "filePath": "skills/hehe-trend-analysis/SKILL.md",
+          "lineStart": 4,
+          "lineEnd": 4,
+          "quote": "盒子原创行业研究 Skill 组合中的趋势分析专项。"
+        }
+      ]
+    },
+    {
+      "unitPath": "skills/hehe-valuation-analysis",
+      "verdict": "未知",
+      "requiredCapabilities": [
+        "web_search",
+        "code_execution"
+      ],
+      "blockingCapability": "web_search",
+      "reason": "来源：代码规则（非模型理解）。所需能力 web_search 状态未知，无法判定可移植性",
+      "evidenceTags": [
+        {
+          "type": "evidence",
+          "filePath": "skills/hehe-valuation-analysis/SKILL.md",
+          "lineStart": 6,
+          "lineEnd": 6,
+          "quote": "选择适用的可比公司或交易、DCF/FCFF/FCFE、SOTP、资产、股利或里程碑情景方法，建立可复算的企业价值或股权价值区间、调整桥、敏感性和隐含预期。"
+        },
+        {
+          "type": "evidence",
+          "filePath": "skills/hehe-valuation-analysis/SKILL.md",
+          "lineStart": 34,
+          "lineEnd": 34,
+          "quote": "用户要求完整、深度或系统研究，或本专项作为 hehe-industry-researcher 完整研究中的适用模块时，必须先形成独立完整专项报告"
+        }
+      ]
+    }
+  ],
+  "userLossList": [],
+  "capabilityModelSnapshot": {
+    "web_search": {
+      "key": "web_search",
+      "name": "Web 实时搜索检索",
+      "category": "外部交互与 Grounding",
+      "status": "unknown",
+      "source": "probe",
+      "timestamp": "2026-11-13T07:31:55.783Z",
+      "probe_result": "未实现：尚未实现 Web 实时搜索检索 (web_search) 的真实探针检测，状态保持未知"
+    },
+    "url_fetch": {
+      "key": "url_fetch",
+      "name": "URL 网页内容抓取解析",
+      "category": "外部交互与 Grounding",
+      "status": "unknown",
+      "source": "probe",
+      "timestamp": "2026-11-13T07:31:55.785Z",
+      "probe_result": "未实现：尚未实现 URL 网页内容抓取解析 (url_fetch) 的真实探针检测，状态保持未知"
+    },
+    "code_execution": {
+      "key": "code_execution",
+      "name": "代码运行与隔离沙盒",
+      "category": "计算与运行时",
+      "status": "unknown",
+      "source": "probe",
+      "timestamp": "2026-11-13T07:31:55.785Z",
+      "probe_result": "未实现：尚未实现 代码运行与隔离沙盒 (code_execution) 的真实探针检测，状态保持未知"
+    },
+    "filesystem_persist": {
+      "key": "filesystem_persist",
+      "name": "文件系统持久化存储",
+      "category": "存储与 I/O",
+      "status": "unknown",
+      "source": "probe",
+      "timestamp": "2026-11-13T07:31:55.786Z",
+      "probe_result": "未实现：尚未实现 文件系统持久化存储 (filesystem_persist) 的真实探针检测，状态保持未知"
+    },
+    "long_output": {
+      "key": "long_output",
+      "name": "长上下文输出生成",
+      "category": "模型与推断",
+      "status": "unknown",
+      "source": "probe",
+      "timestamp": "2026-11-13T07:31:55.786Z",
+      "probe_result": "未实现：尚未实现 长上下文输出生成 (long_output) 的真实探针检测，状态保持未知"
+    },
+    "structured_output": {
+      "key": "structured_output",
+      "name": "结构化 JSON Schema 约束输出",
+      "category": "模型与推断",
+      "status": "supported",
+      "source": "probe",
+      "timestamp": "2026-11-13T07:31:55.786Z",
+      "probe_result": "探针成功: 结构化 JSON 输出校验通过 ({\"ok\": true})"
+    },
+    "binary_file_read": {
+      "key": "binary_file_read",
+      "name": "多模态/二进制文件解析",
+      "category": "存储与 I/O",
+      "status": "unknown",
+      "source": "probe",
+      "timestamp": "2026-11-13T07:31:56.715Z",
+      "probe_result": "未实现：尚未实现 多模态/二进制文件解析 (binary_file_read) 的真实探针检测，状态保持未知"
+    },
+    "gpu": {
+      "key": "gpu",
+      "name": "本地硬件 GPU 加速指令",
+      "category": "计算与运行时",
+      "status": "unknown",
+      "source": "probe",
+      "timestamp": "2026-11-13T07:31:56.716Z",
+      "probe_result": "未实现：尚未实现 本地硬件 GPU 加速指令 (gpu) 的真实探针检测，状态保持未知"
+    },
+    "container_runtime": {
+      "key": "container_runtime",
+      "name": "Root 特权 Docker 容器",
+      "category": "计算与运行时",
+      "status": "unknown",
+      "source": "probe",
+      "timestamp": "2026-11-13T07:31:56.716Z",
+      "probe_result": "未实现：尚未实现 Root 特权 Docker 容器 (container_runtime) 的真实探针检测，状态保持未知"
+    },
+    "background_jobs": {
+      "key": "background_jobs",
+      "name": "守护进程与常驻后台任务",
+      "category": "计算与运行时",
+      "status": "unknown",
+      "source": "probe",
+      "timestamp": "2026-11-13T07:31:56.716Z",
+      "probe_result": "未实现：尚未实现 守护进程与常驻后台任务 (background_jobs) 的真实探针检测，状态保持未知"
+    },
+    "scheduler": {
+      "key": "scheduler",
+      "name": "独立 Cron 定时任务服务",
+      "category": "计算与运行时",
+      "status": "unknown",
+      "source": "probe",
+      "timestamp": "2026-11-13T07:31:56.717Z",
+      "probe_result": "未实现：尚未实现 独立 Cron 定时任务服务 (scheduler) 的真实探针检测，状态保持未知"
+    },
+    "remote_mcp": {
+      "key": "remote_mcp",
+      "name": "远程 MCP (Model Context Protocol)",
+      "category": "外部交互与 Grounding",
+      "status": "unknown",
+      "source": "probe",
+      "timestamp": "2026-11-13T07:31:56.717Z",
+      "probe_result": "未实现：尚未实现 远程 MCP (Model Context Protocol) (remote_mcp) 的真实探针检测，状态保持未知"
+    },
+    "ui_hosting": {
+      "key": "ui_hosting",
+      "name": "客户端 Web 交互与界面宿主",
+      "category": "前端与交付",
+      "status": "unknown",
+      "source": "probe",
+      "timestamp": "2026-11-13T07:31:56.717Z",
+      "probe_result": "未实现：尚未实现 客户端 Web 交互与界面宿主 (ui_hosting) 的真实探针检测，状态保持未知"
+    }
+  },
+  "summary": {
+    "totalUnits": 17,
+    "directPortableCount": 0,
+    "needRewriteCount": 0,
+    "nonPortableCount": 0,
+    "unknownCount": 17
+  }
+}

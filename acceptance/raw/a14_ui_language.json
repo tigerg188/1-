@@ -1,0 +1,600 @@
+{
+  "threshold": 0,
+  "parserEngine": "@babel/parser (TypeScript + JSX AST；注：当前环境 typescript@7.0.2 为原生包未暴露 JS createSourceFile 接口)",
+  "scannedTsFilesCount": 33,
+  "inspectedStringsCount": 405,
+  "parseErrors": [],
+  "hitCount": 59,
+  "hits": [
+    {
+      "file": "src/components/EvidenceTagBadge.tsx",
+      "line": 23,
+      "category": "JSX属性(title)",
+      "text": "Quote: \"",
+      "nonChineseWords": [
+        "Quote"
+      ]
+    },
+    {
+      "file": "src/components/EvidenceTagBadge.tsx",
+      "line": 37,
+      "category": "JSX属性(title)",
+      "text": "Reason:",
+      "nonChineseWords": [
+        "Reason"
+      ]
+    },
+    {
+      "file": "src/components/ModelSelector.tsx",
+      "line": 183,
+      "category": "JSX文本",
+      "text": "提示：若遇 429 配额用尽，可切换为「Gemini 3.1 Flash Lite」或在 Settings > Secrets 切换绑定计费账户的密钥。",
+      "nonChineseWords": [
+        "Flash",
+        "Lite",
+        "Settings",
+        "Secrets"
+      ]
+    },
+    {
+      "file": "src/pages/AdaptersPage.tsx",
+      "line": 156,
+      "category": "JSX文本",
+      "text": "平台可移植性判定与适配器引擎 (Adapters & Feasibility)",
+      "nonChineseWords": [
+        "Adapters",
+        "Feasibility"
+      ]
+    },
+    {
+      "file": "src/pages/AdaptersPage.tsx",
+      "line": 196,
+      "category": "JSX文本",
+      "text": "1. 声明式平台能力拓扑字典 (Capability Model)",
+      "nonChineseWords": [
+        "Capability"
+      ]
+    },
+    {
+      "file": "src/pages/AdaptersPage.tsx",
+      "line": 276,
+      "category": "JSX文本",
+      "text": "2. 确定性整包移植性判定 (Package Verdict & User Loss List)",
+      "nonChineseWords": [
+        "Package",
+        "User",
+        "Loss",
+        "List"
+      ]
+    },
+    {
+      "file": "src/pages/AdaptersPage.tsx",
+      "line": 332,
+      "category": "JSX文本",
+      "text": "用户功能损失列表 (What the User Loses)",
+      "nonChineseWords": [
+        "What",
+        "the",
+        "User",
+        "Loses"
+      ]
+    },
+    {
+      "file": "src/pages/AdaptersPage.tsx",
+      "line": 353,
+      "category": "JSX文本",
+      "text": "3. 逐单元可移植性判定明细 (Per-Unit Verdicts)",
+      "nonChineseWords": [
+        "Per",
+        "Unit",
+        "Verdicts"
+      ]
+    },
+    {
+      "file": "src/pages/AdaptersPage.tsx",
+      "line": 397,
+      "category": "JSX文本",
+      "text": "改写方案指示 (Rewrite Plan)",
+      "nonChineseWords": [
+        "Rewrite",
+        "Plan"
+      ]
+    },
+    {
+      "file": "src/pages/AdaptersPage.tsx",
+      "line": 446,
+      "category": "JSX文本",
+      "text": "选定执行后端 (Execution Backend)",
+      "nonChineseWords": [
+        "Execution"
+      ]
+    },
+    {
+      "file": "src/pages/AdaptersPage.tsx",
+      "line": 492,
+      "category": "JSX文本",
+      "text": "生成的 Backend Config JSON (Dry-Run Configuration)",
+      "nonChineseWords": [
+        "Configuration"
+      ]
+    },
+    {
+      "file": "src/pages/BlueprintPage.tsx",
+      "line": 182,
+      "category": "JSX文本",
+      "text": "蓝图理解与结构提取引擎 (Blueprint Engine)",
+      "nonChineseWords": [
+        "Engine"
+      ]
+    },
+    {
+      "file": "src/pages/BlueprintPage.tsx",
+      "line": 185,
+      "category": "JSX文本",
+      "text": "提取真实设计意图与逻辑架构 (L0~L3 分层隔离)，不假设 Pipeline",
+      "nonChineseWords": [
+        "Pipeline"
+      ]
+    },
+    {
+      "file": "src/pages/BlueprintPage.tsx",
+      "line": 254,
+      "category": "JSX文本",
+      "text": "切换为 Gemini 3.1 Flash Lite 并重试 (配额充裕/低延迟)",
+      "nonChineseWords": [
+        "Flash",
+        "Lite"
+      ]
+    },
+    {
+      "file": "src/pages/BlueprintPage.tsx",
+      "line": 263,
+      "category": "JSX文本",
+      "text": "切换为 Gemini Flash Latest 并重试",
+      "nonChineseWords": [
+        "Flash",
+        "Latest"
+      ]
+    },
+    {
+      "file": "src/pages/BlueprintPage.tsx",
+      "line": 267,
+      "category": "JSX文本",
+      "text": "Settings > Secrets",
+      "nonChineseWords": [
+        "Settings",
+        "Secrets"
+      ]
+    },
+    {
+      "file": "src/pages/BlueprintPage.tsx",
+      "line": 427,
+      "category": "JSX文本",
+      "text": "L0 核心意图与适用目标 (Intent)",
+      "nonChineseWords": [
+        "Intent"
+      ]
+    },
+    {
+      "file": "src/pages/BlueprintPage.tsx",
+      "line": 435,
+      "category": "JSX文本",
+      "text": "系统核心用途 (Purpose)",
+      "nonChineseWords": [
+        "Purpose"
+      ]
+    },
+    {
+      "file": "src/pages/BlueprintPage.tsx",
+      "line": 440,
+      "category": "JSX文本",
+      "text": "预期目标使用者 (Intended Users)",
+      "nonChineseWords": [
+        "Intended",
+        "Users"
+      ]
+    },
+    {
+      "file": "src/pages/BlueprintPage.tsx",
+      "line": 452,
+      "category": "JSX文本",
+      "text": "作者显式原话声明 (Author Statements)",
+      "nonChineseWords": [
+        "Author",
+        "Statements"
+      ]
+    },
+    {
+      "file": "src/pages/BlueprintPage.tsx",
+      "line": 474,
+      "category": "JSX文本",
+      "text": "L1 包拓扑依赖关系 (Package Topology)",
+      "nonChineseWords": [
+        "Package",
+        "Topology"
+      ]
+    },
+    {
+      "file": "src/pages/BlueprintPage.tsx",
+      "line": 505,
+      "category": "JSX文本",
+      "text": "拓扑边依赖流 (Topology Edges)",
+      "nonChineseWords": [
+        "Topology"
+      ]
+    },
+    {
+      "file": "src/pages/BlueprintPage.tsx",
+      "line": 537,
+      "category": "JSX文本",
+      "text": "L2 单元内部流程与属性 (Per-Unit Workflows)",
+      "nonChineseWords": [
+        "Per",
+        "Unit",
+        "Workflows"
+      ]
+    },
+    {
+      "file": "src/pages/BlueprintPage.tsx",
+      "line": 564,
+      "category": "JSX文本",
+      "text": "触发/使用条件 (When to Use)",
+      "nonChineseWords": [
+        "When",
+        "Use"
+      ]
+    },
+    {
+      "file": "src/pages/BlueprintPage.tsx",
+      "line": 570,
+      "category": "JSX文本",
+      "text": "不推荐条件 (When NOT to Use)",
+      "nonChineseWords": [
+        "When",
+        "NOT",
+        "Use"
+      ]
+    },
+    {
+      "file": "src/pages/BlueprintPage.tsx",
+      "line": 579,
+      "category": "JSX文本",
+      "text": "内部执行步骤 (Internal Workflow Steps)",
+      "nonChineseWords": [
+        "Internal",
+        "Workflow",
+        "Steps"
+      ]
+    },
+    {
+      "file": "src/pages/BlueprintPage.tsx",
+      "line": 619,
+      "category": "JSX文本",
+      "text": "验收判定规则 (Acceptance Rules)",
+      "nonChineseWords": [
+        "Acceptance"
+      ]
+    },
+    {
+      "file": "src/pages/BlueprintPage.tsx",
+      "line": 639,
+      "category": "JSX文本",
+      "text": "代码对账报告 (Reconciliation Report - Pure Code)",
+      "nonChineseWords": [
+        "Reconciliation",
+        "Report",
+        "Pure"
+      ]
+    },
+    {
+      "file": "src/pages/BlueprintPage.tsx",
+      "line": 660,
+      "category": "JSX文本",
+      "text": "角色统计分布 (Role Counts)",
+      "nonChineseWords": [
+        "Counts"
+      ]
+    },
+    {
+      "file": "src/pages/BlueprintPage.tsx",
+      "line": 678,
+      "category": "JSX文本",
+      "text": "证据强校验分析 (Evidence Verification Report)",
+      "nonChineseWords": [
+        "Evidence",
+        "Verification",
+        "Report"
+      ]
+    },
+    {
+      "file": "src/pages/BlueprintPage.tsx",
+      "line": 722,
+      "category": "JSX文本",
+      "text": "硬性依赖反例与矛盾检索 (Counterexample Pass)",
+      "nonChineseWords": [
+        "Counterexample"
+      ]
+    },
+    {
+      "file": "src/pages/BlueprintPage.tsx",
+      "line": 773,
+      "category": "JSX文本",
+      "text": "工程文件阅读覆盖率 (File Coverage Table)",
+      "nonChineseWords": [
+        "File",
+        "Coverage",
+        "Table"
+      ]
+    },
+    {
+      "file": "src/pages/BlueprintPage.tsx",
+      "line": 819,
+      "category": "JSX文本",
+      "text": "意图双路探针对比 (Intent Probes)",
+      "nonChineseWords": [
+        "Intent",
+        "Probes"
+      ]
+    },
+    {
+      "file": "src/pages/ImportPage.tsx",
+      "line": 113,
+      "category": "JSX文本",
+      "text": "输入公开 GitHub 仓库地址（支持完整链接、分支链接、SSH 地址或“用户名/仓库名”短路径），服务端将自动下载归档并安全解压。",
+      "nonChineseWords": [
+        "SSH"
+      ]
+    },
+    {
+      "file": "src/pages/InventoryPage.tsx",
+      "line": 84,
+      "category": "JSX文本",
+      "text": "确定性提取清单 (Deterministic Inventory)",
+      "nonChineseWords": [
+        "Deterministic"
+      ]
+    },
+    {
+      "file": "src/pages/InventoryPage.tsx",
+      "line": 87,
+      "category": "JSX文本",
+      "text": "Pure code parse (NO model) · Workspace Hash:",
+      "nonChineseWords": [
+        "Pure",
+        "parse",
+        "Workspace"
+      ]
+    },
+    {
+      "file": "src/pages/InventoryPage.tsx",
+      "line": 179,
+      "category": "JSX文本",
+      "text": "标准规范格式与文件匹配矩阵 (Standard Format Flags)",
+      "nonChineseWords": [
+        "Standard",
+        "Format",
+        "Flags"
+      ]
+    },
+    {
+      "file": "src/pages/InventoryPage.tsx",
+      "line": 207,
+      "category": "JSX文本",
+      "text": "候选入口点 (Candidate Entry Points)",
+      "nonChineseWords": [
+        "Candidate",
+        "Points"
+      ]
+    },
+    {
+      "file": "src/pages/InventoryPage.tsx",
+      "line": 229,
+      "category": "JSX文本",
+      "text": "单元候选目录 (Unit Candidates)",
+      "nonChineseWords": [
+        "Unit",
+        "Candidates"
+      ]
+    },
+    {
+      "file": "src/pages/InventoryPage.tsx",
+      "line": 297,
+      "category": "JSX文本",
+      "text": "相对路径 (Relative Path)",
+      "nonChineseWords": [
+        "Relative",
+        "Path"
+      ]
+    },
+    {
+      "file": "src/pages/InventoryPage.tsx",
+      "line": 319,
+      "category": "JSX文本",
+      "text": "Markdown 标题解析列表 (Line-by-line Headings)",
+      "nonChineseWords": [
+        "Line",
+        "line",
+        "Headings"
+      ]
+    },
+    {
+      "file": "src/pages/InventoryPage.tsx",
+      "line": 348,
+      "category": "JSX文本",
+      "text": "步骤指示与箭头表达式提取 (Step & Arrow Lines)",
+      "nonChineseWords": [
+        "Step",
+        "Arrow",
+        "Lines"
+      ]
+    },
+    {
+      "file": "src/pages/InventoryPage.tsx",
+      "line": 387,
+      "category": "JSX文本",
+      "text": "相对文件与链接匹配 (Relative File Links)",
+      "nonChineseWords": [
+        "Relative",
+        "File",
+        "Links"
+      ]
+    },
+    {
+      "file": "src/pages/InventoryPage.tsx",
+      "line": 420,
+      "category": "JSX文本",
+      "text": "inventory.json (Deterministic Format Output)",
+      "nonChineseWords": [
+        "Deterministic",
+        "Format",
+        "Output"
+      ]
+    },
+    {
+      "file": "src/pages/LedgerPage.tsx",
+      "line": 58,
+      "category": "JSX文本",
+      "text": "证据账本 (Evidence Ledger)",
+      "nonChineseWords": [
+        "Evidence"
+      ]
+    },
+    {
+      "file": "src/pages/LedgerPage.tsx",
+      "line": 61,
+      "category": "JSX文本",
+      "text": "只增不减 (Append-only) 审计日志，记录系统发起的每一项确切操作与计算哈希",
+      "nonChineseWords": [
+        "Append",
+        "only"
+      ]
+    },
+    {
+      "file": "src/pages/LedgerPage.tsx",
+      "line": 138,
+      "category": "JSX属性(placeholder)",
+      "text": "按记录 ID, Action, Stage 或描述检索账本...",
+      "nonChineseWords": [
+        "Action"
+      ]
+    },
+    {
+      "file": "src/pages/LedgerPage.tsx",
+      "line": 165,
+      "category": "JSX文本",
+      "text": "Inputs Hash:",
+      "nonChineseWords": [
+        "Inputs"
+      ]
+    },
+    {
+      "file": "src/pages/LedgerPage.tsx",
+      "line": 169,
+      "category": "JSX文本",
+      "text": "Outputs Hash:",
+      "nonChineseWords": [
+        "Outputs"
+      ]
+    },
+    {
+      "file": "src/pages/UnimplementedPage.tsx",
+      "line": 38,
+      "category": "JSX文本",
+      "text": "C3 (No Fake Completion)",
+      "nonChineseWords": [
+        "Fake",
+        "Completion"
+      ]
+    },
+    {
+      "file": "src/pages/UnimplementedPage.tsx",
+      "line": 45,
+      "category": "JSX文本",
+      "text": "已知缺口 (Gap Log) & 规划范围",
+      "nonChineseWords": [
+        "Gap",
+        "Log"
+      ]
+    },
+    {
+      "file": "src/pages/VerifyPage.tsx",
+      "line": 115,
+      "category": "JSX文本",
+      "text": "独立双路验证与比对引擎 (Independent Verification)",
+      "nonChineseWords": [
+        "Independent",
+        "Verification"
+      ]
+    },
+    {
+      "file": "src/pages/VerifyPage.tsx",
+      "line": 118,
+      "category": "JSX文本",
+      "text": "独立的审计模块与专属 System Prompt，拒绝接收执行器的自我评估与推理",
+      "nonChineseWords": [
+        "System"
+      ]
+    },
+    {
+      "file": "src/pages/VerifyPage.tsx",
+      "line": 144,
+      "category": "JSX文本",
+      "text": "1. 验证前推导的验收标准列表 (Derived Criteria - Pre-Show)",
+      "nonChineseWords": [
+        "Derived",
+        "Criteria",
+        "Pre",
+        "Show"
+      ]
+    },
+    {
+      "file": "src/pages/VerifyPage.tsx",
+      "line": 156,
+      "category": "JSX文本",
+      "text": "Source:",
+      "nonChineseWords": [
+        "Source"
+      ]
+    },
+    {
+      "file": "src/pages/VerifyPage.tsx",
+      "line": 170,
+      "category": "JSX文本",
+      "text": "2. 纯代码确定性强校验 (Code Checks First)",
+      "nonChineseWords": [
+        "Checks",
+        "First"
+      ]
+    },
+    {
+      "file": "src/pages/VerifyPage.tsx",
+      "line": 187,
+      "category": "JSX文本",
+      "text": "3. 逐条标准独立判定 (Per-Criterion Judgement)",
+      "nonChineseWords": [
+        "Per",
+        "Criterion",
+        "Judgement"
+      ]
+    },
+    {
+      "file": "src/pages/VerifyPage.tsx",
+      "line": 241,
+      "category": "JSX文本",
+      "text": "验证器独立 Request Payload 审计日志 (verification_payload.json)",
+      "nonChineseWords": [
+        "Request"
+      ]
+    },
+    {
+      "file": "src/pages/VerifyPage.tsx",
+      "line": 271,
+      "category": "JSX文本",
+      "text": "综合评估报告导出 (Report Exporter)",
+      "nonChineseWords": [
+        "Report",
+        "Exporter"
+      ]
+    }
+  ]
+}

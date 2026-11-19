@@ -1,0 +1,8 @@
+{
+  "tested": true,
+  "passed": true,
+  "workspaceHash": "647963bd77ef97586c4b6665ad174429c9fac3fa2f1ab3faed941f45cc61b961",
+  "run1Hash": "6ac03aeb065320235f753e1b196ac23553e5553d885827754bd2e7a48eb45faa",
+  "run2Hash": "6ac03aeb065320235f753e1b196ac23553e5553d885827754bd2e7a48eb45faa",
+  "message": "确定性校验成功: 两次提取结果字节完全一致 (SHA256: 6ac03aeb06532023...)"
+}

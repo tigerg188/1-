@@ -1,0 +1,25 @@
+{
+  "jobsDirExists": true,
+  "runtimeConfigExists": true,
+  "jsonOnlyErrorHandlerVerified": true,
+  "persistenceVerified": true,
+  "faultInjectionTested": true,
+  "endpointResponseTimes": [
+    {
+      "endpoint": "/api/charter",
+      "avgMs": 2
+    },
+    {
+      "endpoint": "/api/build-log",
+      "avgMs": 2
+    },
+    {
+      "endpoint": "/api/models",
+      "avgMs": 3
+    },
+    {
+      "endpoint": "/api/jobs/workspace/:hash",
+      "avgMs": 4
+    }
+  ]
+}

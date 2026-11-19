@@ -1,0 +1,22 @@
+{
+  "selectedBackend": "plain_model",
+  "fallbackReason": "未实现: 托管沙盒实时探测与执行/产物收集接口 (execute/collect) 尚未实现",
+  "backendConfig": {
+    "backend_id": "plain_model",
+    "agent_config": {
+      "model": "gemini-4-hydrogen",
+      "max_total_tokens": 16384,
+      "tools_enabled": []
+    },
+    "network_allowlist": [],
+    "security_audit": {
+      "no_embedded_secrets": true,
+      "literal_secrets_found": []
+    },
+    "size_limits_pass": true
+  },
+  "auditRes": {
+    "pass": true,
+    "foundSecrets": []
+  }
+}

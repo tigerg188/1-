@@ -1,0 +1,7 @@
+{
+  "singleCallTimeoutSec": 90,
+  "maxRetries": 2,
+  "concurrency": 2,
+  "defaultModelId": "gemini-4-hydrogen",
+  "autoPauseOn429": true
+}

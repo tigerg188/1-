@@ -1,0 +1,8 @@
+{
+  "name": "通用 Agent/Skill 跨平台判定与运行引擎",
+  "description": "对任意未知 Agent/Skill/Prompt 项目进行确定性清单提取、可移植性评估、适配运行与证据链验证的通用 Web 工具",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

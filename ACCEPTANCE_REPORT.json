@@ -1,0 +1,425 @@
+{
+  "timestamp": "2026-11-13T08:05:55.424Z",
+  "workspaceHash": "647963bd77ef97586c4b6665ad174429c9fac3fa2f1ab3faed941f45cc61b961",
+  "thresholds": {
+    "A0_forbidden_max_hits": {
+      "value": 0,
+      "label": "A0(a) 通用违禁词最大允许命中数"
+    },
+    "A0_project_identifier_max_hits": {
+      "value": 0,
+      "label": "A0(b) 被测项目标识符在自身源码中最大允许命中数"
+    },
+    "A1_min_file_count": {
+      "value": 1,
+      "label": "A1 导入项目最少文件数"
+    },
+    "A2_require_exact_hash_match": {
+      "value": true,
+      "label": "A2 两次确定性清单提取 SHA256 必须 100% 一致"
+    },
+    "A3_require_all_edge_endpoints_exist": {
+      "value": true,
+      "label": "A3 拓扑边端点 100% 合法存在"
+    },
+    "A4_require_closed_vocabulary_100pct": {
+      "value": true,
+      "label": "A4 角色与边类型 100% 符合封闭词汇表"
+    },
+    "A5_min_evidence_verification_rate": {
+      "value": 100,
+      "label": "A5 蓝图强证据引用校验率最低通过阈值 (%)"
+    },
+    "A6_require_must_precede_verified_quote_100pct": {
+      "value": true,
+      "label": "A6 所有 must_precede 边必须 100% 具备已校验强证据引文"
+    },
+    "A7_max_l2_promotion_hits": {
+      "value": 0,
+      "label": "A7 L1 节点中混入 L2 内部步骤的最大允许次数"
+    },
+    "A9_require_unit_verdict_100pct": {
+      "value": true,
+      "label": "A9 单元判定与能力来源声明 100% 完整"
+    },
+    "A10_require_zero_embedded_secrets": {
+      "value": true,
+      "label": "A10 DRY-RUN 校验通过且明文密钥为 0"
+    },
+    "A11_require_completed_and_hash_match": {
+      "value": true,
+      "label": "A11 任务状态 completed、存在执行步骤且产物 SHA256 匹配"
+    },
+    "A12_require_independent_payload": {
+      "value": true,
+      "label": "A12 验证器 Payload 已落盘且不含执行器推理字段"
+    },
+    "A14_max_non_chinese_ui_hits": {
+      "value": 0,
+      "label": "A14 面向用户的界面字符串中非中文自然语言单词最大允许命中数"
+    },
+    "A15_max_residual_fake_patterns": {
+      "value": 0,
+      "label": "A15 静态写死结果模式及 R1 残留问题最大允许命中数"
+    },
+    "self_assessment_min_projects_for_score_4": {
+      "value": 2,
+      "label": "自评分达到 4 分所需至少完成测试的独立项目数"
+    }
+  },
+  "acceptanceTests": [
+    {
+      "id": "A0",
+      "name": "宪章审计（违禁词 + 项目标识符）",
+      "method": "A0(a) 读取 config/forbidden_words.json 扫描源码；A0(b) 从已导入清单提取目录/文件基名/frontmatter/4字符以上标题，审计并扣除 config/format_whitelist.json 后全文检索源码与提示词",
+      "mechanicalPassCriterion": "违禁词命中 ≤ 0，项目标识符命中 ≤ 0 且白名单自审无违规",
+      "rawOutputPath": "acceptance/raw/a0_charter_audit.json",
+      "status": "机械失败",
+      "details": "违禁词命中=0，项目标识符命中=31，白名单违规=0"
+    },
+    {
+      "id": "A1",
+      "name": "解压与文件哈希完整性",
+      "method": "核对 .ingest_meta.json 与工作空间磁盘文件实体及 SHA256 哈希",
+      "mechanicalPassCriterion": "文件数 ≥ 1 且全部磁盘文件 SHA256 与清单一致",
+      "rawOutputPath": "acceptance/raw/a1_ingestion_integrity.json",
+      "status": "机械通过",
+      "details": "解压校验一致：磁盘 153 个文件 SHA256 全部匹配"
+    },
+    {
+      "id": "A2",
+      "name": "清单计算两次一致性",
+      "method": "对存在源文件的工程运行两次纯代码清单提取，比对序列化字节与 SHA256",
+      "mechanicalPassCriterion": "两次提取 JSON SHA256 完全一致",
+      "rawOutputPath": "acceptance/raw/a2_inventory_determinism.json",
+      "status": "机械通过",
+      "details": "确定性校验成功: 两次提取结果字节完全一致 (SHA256: 6ac03aeb06532023...)"
+    },
+    {
+      "id": "A3",
+      "name": "代码对账检查",
+      "method": "核对清单单元候选、L1 节点与边端点合法性",
+      "mechanicalPassCriterion": "L1 节点非空且所有边端点 100% 合法存在",
+      "rawOutputPath": "acceptance/raw/a3_reconciliation.json",
+      "status": "机械通过",
+      "details": "L1 节点数=17，候选归属=17/17，边端点合法=true"
+    },
+    {
+      "id": "A4",
+      "name": "封闭词汇表校验",
+      "method": "校验全部 L1 节点角色与边类型是否属于允许的封闭词汇表",
+      "mechanicalPassCriterion": "所有角色与边类型 100% 属于封闭词汇表",
+      "rawOutputPath": "acceptance/raw/a4_blueprint_schema.json",
+      "status": "机械通过",
+      "details": "检查 17 个节点与 2 条边，非法角色=0，非法边类型=0"
+    },
+    {
+      "id": "A5",
+      "name": "强证据引用校验率",
+      "method": "核验蓝图中所有证据标签并在低于阈值时逐条列出未验证断言",
+      "mechanicalPassCriterion": "evidence_verification.verificationRate ≥ 100% 且无未验证断言",
+      "rawOutputPath": "acceptance/raw/a5_evidence_verification.json",
+      "status": "机械失败",
+      "details": "强证据校验率 87%（20/23）低于阈值 100%，共 3 条未验证断言"
+    },
+    {
+      "id": "A6",
+      "name": "串联断言（顺序依赖）审计",
+      "method": "检验所有 must_precede 边是否带有已校验的强证据引文，无数据时标为不适用",
+      "mechanicalPassCriterion": "存在 must_precede 边且 100% 具备已校验引文（无边则为不适用）",
+      "rawOutputPath": "acceptance/raw/a6_serial_claim_audit.json",
+      "status": "不适用",
+      "details": "蓝图 L1 拓扑中不存在 must_precede 串联边（0 条），无法进行顺序依赖引文审计，不予空通过"
+    },
+    {
+      "id": "A7",
+      "name": "层次分离审计（L1 与 L2 隔离）",
+      "method": "核验 L1 节点是否均来自真实清单单元且无 L2 内部步骤描述混入 L1 拓扑",
+      "mechanicalPassCriterion": "L1/L2 数据均存在且层次混入命中 ≤ 0（缺数据时标为不适用或未测试）",
+      "rawOutputPath": "acceptance/raw/a7_layer_separation.json",
+      "status": "机械通过",
+      "details": "核验 17 个 L1 节点与 41 个 L2 内部步骤，全部 L1 节点对应真实清单单元且无 L2 步骤上升混入"
+    },
+    {
+      "id": "A8",
+      "name": "重命名不变性测试",
+      "method": "对随机重命名副本重新提取清单与蓝图，比对角色与边数量守恒",
+      "mechanicalPassCriterion": "角色与边结构在容差范围内守恒",
+      "rawOutputPath": "acceptance/raw/a8_rename_invariance.json",
+      "status": "未测试",
+      "details": "尚未执行重命名不变性对照测试"
+    },
+    {
+      "id": "A9",
+      "name": "可移植性判定一致性",
+      "method": "检验所有单元是否具备非空判定与原因，且能力字典全部条目具有合法 source 声明",
+      "mechanicalPassCriterion": "100% 单元具备非空判定与原因，且 100% 能力项具备合法 source",
+      "rawOutputPath": "acceptance/raw/a9_feasibility_consistency.json",
+      "status": "机械通过",
+      "details": "全部 17 个单元均具备明确判定与原因，13 项能力来源声明完整"
+    },
+    {
+      "id": "A10",
+      "name": "适配器配置预演",
+      "method": "基于当前清单与可移植性评估真实构造适配配置，执行容量限制与明文密钥正则扫描",
+      "mechanicalPassCriterion": "配置生成成功、容量通过且明文密钥命中数为 0",
+      "rawOutputPath": "acceptance/raw/a10_adapter_dry_run.json",
+      "status": "机械通过",
+      "details": "DRY-RUN 实测通过：选定后端=plain_model，无硬编码密钥，容量限额校验通过"
+    },
+    {
+      "id": "A11",
+      "name": "任务执行打卡与产物哈希",
+      "method": "校验执行状态 completed、非空打卡步骤与产物文件磁盘 SHA256 匹配",
+      "mechanicalPassCriterion": "status=completed、存在步骤且所有产物磁盘 SHA256 匹配",
+      "rawOutputPath": "acceptance/raw/a11_execution.json",
+      "status": "机械失败",
+      "details": "执行校验未通过：status=running，steps=1，hashesOk=false"
+    },
+    {
+      "id": "A12",
+      "name": "验证器独立性核验",
+      "method": "检查实录验证请求 Payload 是否落盘且不包含执行器推理字段",
+      "mechanicalPassCriterion": "Payload 落盘存在且不含 executor_reasoning / self_assessment",
+      "rawOutputPath": "acceptance/raw/a12_verifier_independence.json",
+      "status": "未测试",
+      "details": "尚未触发独立验证并记录 Payload 文件"
+    },
+    {
+      "id": "A13",
+      "name": "限流避退与恢复测试",
+      "method": "检查执行状态是否记录过真实 429 暂停消息与断点恢复痕迹",
+      "mechanicalPassCriterion": "观测到 paused_quota 及标准中文暂停提示并支持恢复",
+      "rawOutputPath": "acceptance/raw/a13_resume_and_quota.json",
+      "status": "未测试",
+      "details": "尚未在运行时观测到 HTTP 429 限流暂停与断点恢复流程"
+    },
+    {
+      "id": "A14",
+      "name": "界面全中文合规（AST 扫描）",
+      "method": "使用语法树解析全部 .ts/.tsx 文件，提取 JSX 文本、交互属性、提示调用及返回 message 字段并检测非中文自然语言单词",
+      "mechanicalPassCriterion": "非中文自然语言单词命中数 ≤ 0 且无解析错误",
+      "rawOutputPath": "acceptance/raw/a14_ui_language.json",
+      "status": "机械失败",
+      "details": "AST 解析了 33 个文件（405 条字符串），命中 59 处非中文用户面向字符串（阈值 ≤ 0），解析异常 0 个"
+    },
+    {
+      "id": "A15",
+      "name": "诚实度与 R1 清零核查",
+      "method": "静态扫描写死结果模式并逐项核对 /R1_发现清单.md 残留是否清零",
+      "mechanicalPassCriterion": "静态写死结果命中与 R1 残留总计 ≤ 0",
+      "rawOutputPath": "acceptance/raw/a15_honesty.json",
+      "status": "机械通过",
+      "details": "静态扫描 32 个源码文件与核验 19 条 R1 发现项，写死假结果命中 0 处，R1 残留 0 项"
+    },
+    {
+      "id": "A16",
+      "name": "对照组第二项目对比",
+      "method": "当导入结构不同的第二个对照项目时对比平台识别与判定差异",
+      "mechanicalPassCriterion": "完成至少两个独立项目的导入与对照差异报告",
+      "rawOutputPath": "acceptance/raw/a16_control.json",
+      "status": "未测试",
+      "details": "工作空间目录存在 2 个项目，但尚未建立跨项目对照对比报告"
+    },
+    {
+      "id": "A17",
+      "name": "稳健性与后台作业鲁棒性",
+      "method": "校验未命中 /api 路径返回严格 JSON、后台作业持久化断点恢复、429 与超时隔离及端点响应耗时统计",
+      "mechanicalPassCriterion": "所有后端接口 < 5 秒返回、非 API 错误返回 JSON 且作业可持久化暂停续传",
+      "rawOutputPath": "acceptance/raw/a17_robustness.json",
+      "status": "机械通过",
+      "details": "稳健性测试通过：非 /api 路径返回严格 JSON、后台作业持久化及断点续传机制正常"
+    }
+  ],
+  "selfAssessment": {
+    "understandingAccuracy": {
+      "key": "understandingAccuracy",
+      "label": "1. 理解准确性",
+      "cites": [
+        "A3",
+        "A4",
+        "A7"
+      ],
+      "autoCappedScore": 3,
+      "score": 3,
+      "manualConfirmed": false,
+      "capped": true,
+      "capReason": "支撑测试全部机械通过，但仅测过 1 个项目（需 ≥2）或 A8 改名不变性未通过，按规则最高封顶 3 分"
+    },
+    "noCaseKnowledge": {
+      "key": "noCaseKnowledge",
+      "label": "2. 无案例硬编码",
+      "cites": [
+        "A0",
+        "A8"
+      ],
+      "autoCappedScore": 1,
+      "score": 1,
+      "manualConfirmed": false,
+      "capped": true,
+      "capReason": "支撑测试 A0 判定为“机械失败”，按规则最高封顶 1 分"
+    },
+    "reproducibility": {
+      "key": "reproducibility",
+      "label": "3. 可复现性",
+      "cites": [
+        "A1",
+        "A2"
+      ],
+      "autoCappedScore": 3,
+      "score": 3,
+      "manualConfirmed": false,
+      "capped": true,
+      "capReason": "支撑测试全部机械通过，但仅测过 1 个项目（需 ≥2）或 A8 改名不变性未通过，按规则最高封顶 3 分"
+    },
+    "evidenceCompleteness": {
+      "key": "evidenceCompleteness",
+      "label": "4. 证据完整性",
+      "cites": [
+        "A5",
+        "A6"
+      ],
+      "autoCappedScore": 1,
+      "score": 1,
+      "manualConfirmed": false,
+      "capped": true,
+      "capReason": "支撑测试 A5 判定为“机械失败”，按规则最高封顶 1 分"
+    },
+    "feasibilityVerdict": {
+      "key": "feasibilityVerdict",
+      "label": "5. 适配判断",
+      "cites": [
+        "A9",
+        "A10"
+      ],
+      "autoCappedScore": 3,
+      "score": 3,
+      "manualConfirmed": false,
+      "capped": true,
+      "capReason": "支撑测试全部机械通过，但仅测过 1 个项目（需 ≥2）或 A8 改名不变性未通过，按规则最高封顶 3 分"
+    },
+    "execution": {
+      "key": "execution",
+      "label": "6. 执行",
+      "cites": [
+        "A11",
+        "A13"
+      ],
+      "autoCappedScore": 1,
+      "score": 1,
+      "manualConfirmed": false,
+      "capped": true,
+      "capReason": "支撑测试 A11 判定为“机械失败”，按规则最高封顶 1 分"
+    },
+    "verificationIndependence": {
+      "key": "verificationIndependence",
+      "label": "7. 验证独立性",
+      "cites": [
+        "A12"
+      ],
+      "autoCappedScore": 2,
+      "score": 2,
+      "manualConfirmed": false,
+      "capped": true,
+      "capReason": "支撑测试 A12 处于“未测试”状态，按规则最高封顶 2 分"
+    },
+    "chineseUI": {
+      "key": "chineseUI",
+      "label": "8. 中文界面",
+      "cites": [
+        "A14"
+      ],
+      "autoCappedScore": 1,
+      "score": 1,
+      "manualConfirmed": false,
+      "capped": true,
+      "capReason": "支撑测试 A14 判定为“机械失败”，按规则最高封顶 1 分"
+    },
+    "quotaFriendly": {
+      "key": "quotaFriendly",
+      "label": "9. 额度友好",
+      "cites": [
+        "A11",
+        "A13"
+      ],
+      "autoCappedScore": 1,
+      "score": 1,
+      "manualConfirmed": false,
+      "capped": true,
+      "capReason": "支撑测试 A11 判定为“机械失败”，按规则最高封顶 1 分"
+    }
+  },
+  "biasDeclaration": {
+    "objectiveMetrics": {
+      "blueprintEvidenceVerificationRate": 87,
+      "blueprintEvidenceDetail": "真实已强校验 20 / 23 条断言 (87%)",
+      "fileReadCoverageRate": 20.2,
+      "fileReadCoverageDetail": "真实读取 2914 / 14420 行（涉及 17 / 146 个文件，覆盖率 20.2%）",
+      "codeRuleFallbackUnitRatio": 0,
+      "codeRuleFallbackDetail": "代码规则兜底单元 0 / 17 个 (0%)"
+    },
+    "testedProjectsCount": 1,
+    "renameInvariancePassed": false,
+    "cappedDimensions": [
+      {
+        "key": "understandingAccuracy",
+        "label": "1. 理解准确性",
+        "score": 3,
+        "reason": "支撑测试全部机械通过，但仅测过 1 个项目（需 ≥2）或 A8 改名不变性未通过，按规则最高封顶 3 分"
+      },
+      {
+        "key": "noCaseKnowledge",
+        "label": "2. 无案例硬编码",
+        "score": 1,
+        "reason": "支撑测试 A0 判定为“机械失败”，按规则最高封顶 1 分"
+      },
+      {
+        "key": "reproducibility",
+        "label": "3. 可复现性",
+        "score": 3,
+        "reason": "支撑测试全部机械通过，但仅测过 1 个项目（需 ≥2）或 A8 改名不变性未通过，按规则最高封顶 3 分"
+      },
+      {
+        "key": "evidenceCompleteness",
+        "label": "4. 证据完整性",
+        "score": 1,
+        "reason": "支撑测试 A5 判定为“机械失败”，按规则最高封顶 1 分"
+      },
+      {
+        "key": "feasibilityVerdict",
+        "label": "5. 适配判断",
+        "score": 3,
+        "reason": "支撑测试全部机械通过，但仅测过 1 个项目（需 ≥2）或 A8 改名不变性未通过，按规则最高封顶 3 分"
+      },
+      {
+        "key": "execution",
+        "label": "6. 执行",
+        "score": 1,
+        "reason": "支撑测试 A11 判定为“机械失败”，按规则最高封顶 1 分"
+      },
+      {
+        "key": "verificationIndependence",
+        "label": "7. 验证独立性",
+        "score": 2,
+        "reason": "支撑测试 A12 处于“未测试”状态，按规则最高封顶 2 分"
+      },
+      {
+        "key": "chineseUI",
+        "label": "8. 中文界面",
+        "score": 1,
+        "reason": "支撑测试 A14 判定为“机械失败”，按规则最高封顶 1 分"
+      },
+      {
+        "key": "quotaFriendly",
+        "label": "9. 额度友好",
+        "score": 1,
+        "reason": "支撑测试 A11 判定为“机械失败”，按规则最高封顶 1 分"
+      }
+    ]
+  },
+  "manualReviews": {
+    "confirmed": false,
+    "confirmedAt": "2026-11-13T06:33:26.416Z",
+    "confirmedDimensions": {}
+  }
+}

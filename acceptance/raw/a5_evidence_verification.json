@@ -1,0 +1,30 @@
+{
+  "threshold": 100,
+  "actualRate": 87,
+  "verifiedCount": 20,
+  "totalTags": 23,
+  "unverifiedCount": 3,
+  "unverifiedAssertions": [
+    {
+      "type": "evidence",
+      "filePath": "skills/hehe-market-sizing/SKILL.md",
+      "lineStart": 4,
+      "quote": "按问题选择市场机会、交易经营、采购预算等方法，提供公式、参数、情景与敏感性分析",
+      "reason": "在 skills/hehe-market-sizing/SKILL.md 中未找到对应原文"
+    },
+    {
+      "type": "evidence",
+      "filePath": "skills/hehe-valuation-analysis/SKILL.md",
+      "lineStart": 34,
+      "quote": "用户要求完整、深度或系统研究，或本专项作为 hehe-industry-researcher 完整研究中的适用模块时，必须先形成独立完整专项报告",
+      "reason": "在 skills/hehe-valuation-analysis/SKILL.md 中未找到对应原文"
+    },
+    {
+      "type": "evidence",
+      "filePath": "skills/hehe-valuation-analysis/SKILL.md",
+      "lineStart": 34,
+      "quote": "用户要求完整、深度或系统研究，或本专项作为 hehe-industry-researcher 完整研究中的适用模块时，必须先形成独立完整专项报告",
+      "reason": "在 skills/hehe-valuation-analysis/SKILL.md 中未找到对应原文"
+    }
+  ]
+}

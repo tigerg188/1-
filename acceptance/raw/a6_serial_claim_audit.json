@@ -1,0 +1,6 @@
+{
+  "status": "不适用",
+  "mustPrecedeCount": 0,
+  "totalEdges": 2,
+  "message": "蓝图 L1 拓扑中不存在 must_precede 串联边（0 条），无法进行顺序依赖引文审计，不予空通过"
+}

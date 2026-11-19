@@ -1,0 +1,11 @@
+{
+  "description": "通用违禁词表（禁止在源码与默认配置中出现示例、演示、模拟等预置词）",
+  "words": [
+    "sample",
+    "demo",
+    "mock",
+    "fixture",
+    "default_url",
+    "example_task"
+  ]
+}

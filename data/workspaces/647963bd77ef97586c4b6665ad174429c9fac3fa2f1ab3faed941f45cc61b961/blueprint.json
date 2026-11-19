@@ -1,0 +1,3323 @@
+{
+  "workspaceHash": "647963bd77ef97586c4b6665ad174429c9fac3fa2f1ab3faed941f45cc61b961",
+  "updatedAt": "2026-11-13T07:31:41.396Z",
+  "l0_intent": {
+    "purpose": "构建一套由总入口统筹，包含 16 项专业 Skill 的中文行业与企业研究工作流，实现从开题、信息搜索、专项分析到最终专业报告交付的端到端闭环。",
+    "intended_users": [
+      "行业研究员",
+      "企业战略分析师",
+      "投研人员"
+    ],
+    "stated_non_goals": [
+      "非自动化办公任务",
+      "非通用搜索引擎",
+      "非即时新闻资讯推送"
+    ],
+    "author_statements": [
+      {
+        "statement": "# 盒盒行业研究技能包",
+        "evidence": {
+          "type": "evidence",
+          "filePath": "README.md",
+          "lineStart": 1,
+          "lineEnd": 1,
+          "quote": "# 盒盒行业研究技能包"
+        }
+      }
+    ]
+  },
+  "l1_topology": {
+    "nodes": [
+      {
+        "id": "/",
+        "label": "行业研究总入口",
+        "role": "entry_router",
+        "unitPath": "/"
+      },
+      {
+        "id": "skills/hehe-industry-researcher",
+        "label": "研究统筹路由",
+        "role": "entry_router",
+        "unitPath": "skills/hehe-industry-researcher"
+      },
+      {
+        "id": "skills/hehe-business-model",
+        "label": "商业模式分析",
+        "role": "specialist",
+        "unitPath": "skills/hehe-business-model"
+      },
+      {
+        "id": "skills/hehe-company-profile",
+        "label": "企业经营画像",
+        "role": "specialist",
+        "unitPath": "skills/hehe-company-profile"
+      },
+      {
+        "id": "skills/hehe-competitive-landscape",
+        "label": "竞争格局分析",
+        "role": "specialist",
+        "unitPath": "skills/hehe-competitive-landscape"
+      },
+      {
+        "id": "skills/hehe-financial-analysis",
+        "label": "财务深度分析",
+        "role": "specialist",
+        "unitPath": "skills/hehe-financial-analysis"
+      },
+      {
+        "id": "skills/hehe-governance-capital-allocation",
+        "label": "治理与资本配置",
+        "role": "specialist",
+        "unitPath": "skills/hehe-governance-capital-allocation"
+      },
+      {
+        "id": "skills/hehe-industry-chain-map",
+        "label": "产业链全景分析",
+        "role": "specialist",
+        "unitPath": "skills/hehe-industry-chain-map"
+      },
+      {
+        "id": "skills/hehe-industry-drivers",
+        "label": "驱动力归因分析",
+        "role": "specialist",
+        "unitPath": "skills/hehe-industry-drivers"
+      },
+      {
+        "id": "skills/hehe-industry-pain-points",
+        "label": "行业痛点辨析",
+        "role": "specialist",
+        "unitPath": "skills/hehe-industry-pain-points"
+      },
+      {
+        "id": "skills/hehe-investment-logic",
+        "label": "投资逻辑判断",
+        "role": "specialist",
+        "unitPath": "skills/hehe-investment-logic"
+      },
+      {
+        "id": "skills/hehe-market-sizing",
+        "label": "市场规模测算",
+        "role": "specialist",
+        "unitPath": "skills/hehe-market-sizing"
+      },
+      {
+        "id": "skills/hehe-pest-analysis",
+        "label": "PEST 外部环境分析",
+        "role": "specialist",
+        "unitPath": "skills/hehe-pest-analysis"
+      },
+      {
+        "id": "skills/hehe-report-presentation",
+        "label": "可视化呈现",
+        "role": "specialist",
+        "unitPath": "skills/hehe-report-presentation"
+      },
+      {
+        "id": "skills/hehe-report-writing",
+        "label": "专业文稿写作",
+        "role": "specialist",
+        "unitPath": "skills/hehe-report-writing"
+      },
+      {
+        "id": "skills/hehe-trend-analysis",
+        "label": "行业趋势分析",
+        "role": "specialist",
+        "unitPath": "skills/hehe-trend-analysis"
+      },
+      {
+        "id": "skills/hehe-valuation-analysis",
+        "label": "估值分析",
+        "role": "specialist",
+        "unitPath": "skills/hehe-valuation-analysis"
+      }
+    ],
+    "edges": [
+      {
+        "from": "/",
+        "to": "skills/hehe-industry-researcher",
+        "type": "routes_to",
+        "description": "总入口将研究任务分发至核心研究统筹模块",
+        "evidence": {
+          "type": "evidence",
+          "filePath": "README.md",
+          "lineStart": 3,
+          "lineEnd": 3,
+          "quote": "一套由总入口统筹、13 个专项 Skill 协同执行的中文行业与企业研究工作流。"
+        }
+      },
+      {
+        "from": "skills/hehe-industry-researcher",
+        "to": "skills/hehe-business-model",
+        "type": "may_invoke",
+        "description": "研究流程中按需调用商业模式分析专项",
+        "evidence": {
+          "type": "evidence",
+          "filePath": "skills/hehe-business-model/SKILL.md",
+          "lineStart": 5,
+          "lineEnd": 5,
+          "quote": "盒子原创行业研究 Skill 组合中的商业模式分析专项。"
+        }
+      }
+    ]
+  },
+  "l2_workflows": [
+    {
+      "unitPath": "/",
+      "steps": [
+        {
+          "stepIndex": 1,
+          "description": "通过总入口统一管理项目，调用 13 个专项 Skill。",
+          "evidence": {
+            "type": "evidence",
+            "filePath": "README.md",
+            "lineStart": 11,
+            "lineEnd": 11,
+            "quote": "它由 `hehe-industry-researcher` 管理项目，再按任务调用市场规模、产业链、商业模式、竞争格局、财务、估值等 13 个专项 Skill。"
+          }
+        }
+      ]
+    },
+    {
+      "unitPath": "skills/hehe-business-model",
+      "steps": [
+        {
+          "stepIndex": 1,
+          "description": "读取材料并按任务卡或独立对话确认研究对象。",
+          "evidence": {
+            "type": "evidence",
+            "filePath": "skills/hehe-business-model/SKILL.md",
+            "lineStart": 17,
+            "lineEnd": 17,
+            "quote": "收到任务卡和材料索引后直接读取材料并执行，不重新启动路由。"
+          }
+        }
+      ]
+    },
+    {
+      "unitPath": "skills/hehe-company-profile",
+      "steps": [
+        {
+          "stepIndex": 1,
+          "description": "建立公司底座并确认研究范围。",
+          "evidence": {
+            "type": "evidence",
+            "filePath": "skills/hehe-company-profile/SKILL.md",
+            "lineStart": 34,
+            "lineEnd": 34,
+            "quote": "先确认法定主体、上市主体、控股集团、实际经营主体、品牌、产品和业务分部，避免混称"
+          }
+        }
+      ]
+    },
+    {
+      "unitPath": "skills/hehe-competitive-landscape",
+      "steps": [
+        {
+          "stepIndex": 1,
+          "description": "明确行业细分市场与参与者。",
+          "evidence": {
+            "type": "evidence",
+            "filePath": "skills/hehe-competitive-landscape/SKILL.md",
+            "lineStart": 33,
+            "lineEnd": 33,
+            "quote": "明确研究什么行业或细分市场、包含哪些产品与客户，以及地域、时间和相关渠道。"
+          }
+        }
+      ]
+    },
+    {
+      "unitPath": "skills/hehe-financial-analysis",
+      "steps": [
+        {
+          "stepIndex": 1,
+          "description": "确认范围，整理原值和版本",
+          "evidence": {
+            "type": "evidence",
+            "filePath": "skills/hehe-financial-analysis/SKILL.md",
+            "lineStart": 113,
+            "lineEnd": 113,
+            "quote": "建立财务分析范围表"
+          }
+        },
+        {
+          "stepIndex": 2,
+          "description": "标准化三表、分部并完成勾稽",
+          "evidence": {
+            "type": "evidence",
+            "filePath": "skills/hehe-financial-analysis/SKILL.md",
+            "lineStart": 139,
+            "lineEnd": 139,
+            "quote": "标准化三表、分部并完成勾稽"
+          }
+        },
+        {
+          "stepIndex": 3,
+          "description": "解释增长、利润、现金和营运资本",
+          "evidence": {
+            "type": "evidence",
+            "filePath": "skills/hehe-financial-analysis/SKILL.md",
+            "lineStart": 145,
+            "lineEnd": 145,
+            "quote": "解释增长、利润、现金和营运资本"
+          }
+        }
+      ]
+    },
+    {
+      "unitPath": "skills/hehe-governance-capital-allocation",
+      "steps": [
+        {
+          "stepIndex": 1,
+          "description": "拆开四类权利",
+          "evidence": {
+            "type": "evidence",
+            "filePath": "skills/hehe-governance-capital-allocation/SKILL.md",
+            "lineStart": 122,
+            "lineEnd": 122,
+            "quote": "拆开四类权利"
+          }
+        },
+        {
+          "stepIndex": 2,
+          "description": "建立控制权链和变化时间轴",
+          "evidence": {
+            "type": "evidence",
+            "filePath": "skills/hehe-governance-capital-allocation/SKILL.md",
+            "lineStart": 133,
+            "lineEnd": 133,
+            "quote": "建立控制权链和变化时间轴"
+          }
+        },
+        {
+          "stepIndex": 3,
+          "description": "分析激励、约束与利益冲突",
+          "evidence": {
+            "type": "evidence",
+            "filePath": "skills/hehe-governance-capital-allocation/SKILL.md",
+            "lineStart": 141,
+            "lineEnd": 141,
+            "quote": "分析激励、约束与利益冲突"
+          }
+        }
+      ]
+    },
+    {
+      "unitPath": "skills/hehe-industry-chain-map",
+      "steps": [
+        {
+          "stepIndex": 1,
+          "description": "明确分析范围和产业链任务",
+          "evidence": {
+            "type": "evidence",
+            "filePath": "skills/hehe-industry-chain-map/SKILL.md",
+            "lineStart": 62,
+            "lineEnd": 62,
+            "quote": "明确分析范围和产业链要完成的任务"
+          }
+        },
+        {
+          "stepIndex": 2,
+          "description": "拆必要功能，建立功能链和结构拓扑",
+          "evidence": {
+            "type": "evidence",
+            "filePath": "skills/hehe-industry-chain-map/SKILL.md",
+            "lineStart": 89,
+            "lineEnd": 89,
+            "quote": "先拆必要功能，建立功能链和结构拓扑"
+          }
+        },
+        {
+          "stepIndex": 3,
+          "description": "按参与角色重画上下游关系",
+          "evidence": {
+            "type": "evidence",
+            "filePath": "skills/hehe-industry-chain-map/SKILL.md",
+            "lineStart": 113,
+            "lineEnd": 113,
+            "quote": "按参与角色重画上下游关系"
+          }
+        }
+      ]
+    },
+    {
+      "unitPath": "skills/hehe-industry-drivers",
+      "steps": [
+        {
+          "stepIndex": 1,
+          "description": "确定要解释的结果",
+          "evidence": {
+            "type": "evidence",
+            "filePath": "skills/hehe-industry-drivers/SKILL.md",
+            "lineStart": 63,
+            "lineEnd": 63,
+            "quote": "确定要解释的结果"
+          }
+        },
+        {
+          "stepIndex": 2,
+          "description": "拆解结果并寻找候选驱动",
+          "evidence": {
+            "type": "evidence",
+            "filePath": "skills/hehe-industry-drivers/SKILL.md",
+            "lineStart": 72,
+            "lineEnd": 72,
+            "quote": "拆解结果并寻找候选驱动"
+          }
+        },
+        {
+          "stepIndex": 3,
+          "description": "核查驱动路径",
+          "evidence": {
+            "type": "evidence",
+            "filePath": "skills/hehe-industry-drivers/SKILL.md",
+            "lineStart": 86,
+            "lineEnd": 86,
+            "quote": "核查驱动路径"
+          }
+        }
+      ]
+    },
+    {
+      "unitPath": "skills/hehe-industry-pain-points",
+      "steps": [
+        {
+          "stepIndex": 1,
+          "description": "明确范围、承担者与任务",
+          "evidence": {
+            "type": "evidence",
+            "filePath": "skills/hehe-industry-pain-points/SKILL.md",
+            "lineStart": 69,
+            "lineEnd": 71,
+            "quote": "承担者 × 任务/流程/产业节点 × 情境 × 时间窗口"
+          }
+        },
+        {
+          "stepIndex": 2,
+          "description": "整理候选并选用分析方式",
+          "evidence": {
+            "type": "evidence",
+            "filePath": "skills/hehe-industry-pain-points/SKILL-MD",
+            "lineStart": 77,
+            "lineEnd": 86,
+            "quote": "需求、抱怨/情绪/反馈、流程摩擦、产业瓶颈、经营约束、风险、产品卖点/节省承诺、行业痛点"
+          }
+        }
+      ]
+    },
+    {
+      "unitPath": "skills/hehe-industry-researcher",
+      "steps": [
+        {
+          "stepIndex": 1,
+          "description": "研究开题阶段",
+          "evidence": {
+            "type": "evidence",
+            "filePath": "skills/hehe-industry-researcher/SKILL.md",
+            "lineStart": 96,
+            "lineEnd": 98,
+            "quote": "第一次实质响应必须先集中提出开题问题并等待用户答复。"
+          }
+        },
+        {
+          "stepIndex": 2,
+          "description": "信息搜索与审核阶段",
+          "evidence": {
+            "type": "evidence",
+            "filePath": "skills/hehe-industry-researcher/SKILL.md",
+            "lineStart": 113,
+            "lineEnd": 115,
+            "quote": "根据研究问题和已有材料，设计搜索方向、关键词和需收集的字段"
+          }
+        }
+      ]
+    },
+    {
+      "unitPath": "skills/hehe-investment-logic",
+      "steps": [
+        {
+          "stepIndex": 1,
+          "description": "确认研究场景",
+          "evidence": {
+            "type": "evidence",
+            "filePath": "skills/hehe-investment-logic/SKILL.md",
+            "lineStart": 49,
+            "lineEnd": 55,
+            "quote": "A. 行业机会、B. 企业、C. 项目、D. 上市证券、E. 具体交易、F. 其他"
+          }
+        },
+        {
+          "stepIndex": 2,
+          "description": "回答投资五问",
+          "evidence": {
+            "type": "evidence",
+            "filePath": "skills/hehe-investment-logic/SKILL.md",
+            "lineStart": 36,
+            "lineEnd": 40,
+            "quote": "是否值得投；可以通过什么方式进入；为什么现在投；回报靠什么实现；什么信号会让逻辑失效。"
+          }
+        }
+      ]
+    },
+    {
+      "unitPath": "skills/hehe-market-sizing",
+      "steps": [
+        {
+          "stepIndex": 1,
+          "description": "选择测算角度",
+          "evidence": {
+            "type": "evidence",
+            "filePath": "skills/hehe-market-sizing/SKILL.md",
+            "lineStart": 33,
+            "lineEnd": 42,
+            "quote": "市场机会、交易与经营规模、采购与预算、财政与经费、已有规模续算、宏观与行业统计拆分、保有量与更替、类比与代理指标"
+          }
+        },
+        {
+          "stepIndex": 2,
+          "description": "参数整理与情景分析",
+          "evidence": {
+            "type": "evidence",
+            "filePath": "skills/hehe-market-sizing/SKILL.md",
+            "lineStart": 62,
+            "lineEnd": 64,
+            "quote": "当关键假设足以改变结果时，至少提供基准情景及上下边界"
+          }
+        }
+      ]
+    },
+    {
+      "unitPath": "skills/hehe-pest-analysis",
+      "steps": [
+        {
+          "stepIndex": 1,
+          "description": "明确研究范围",
+          "evidence": {
+            "type": "evidence",
+            "filePath": "skills/hehe-pest-analysis/SKILL.md",
+            "lineStart": 49,
+            "lineEnd": 51,
+            "quote": "目标行业或细分赛道｜包含与排除｜地域或目标市场｜观察期与判断期｜研究问题｜决策用途｜已有材料"
+          }
+        },
+        {
+          "stepIndex": 2,
+          "description": "选择分析维度和因素",
+          "evidence": {
+            "type": "evidence",
+            "filePath": "skills/hehe-pest-analysis/SKILL.md",
+            "lineStart": 62,
+            "lineEnd": 64,
+            "quote": "先按问题选择维度，再读取对应方法"
+          }
+        },
+        {
+          "stepIndex": 3,
+          "description": "分析因素如何影响行业",
+          "evidence": {
+            "type": "evidence",
+            "filePath": "skills/hehe-pest-analysis/SKILL.md",
+            "lineStart": 83,
+            "lineEnd": 83,
+            "quote": "对每个重要因素说明"
+          }
+        },
+        {
+          "stepIndex": 4,
+          "description": "形成综合判断",
+          "evidence": {
+            "type": "evidence",
+            "filePath": "skills/hehe-pest-analysis/SKILL.md",
+            "lineStart": 96,
+            "lineEnd": 96,
+            "quote": "综合 P、E、S、T 的结果，回答"
+          }
+        }
+      ]
+    },
+    {
+      "unitPath": "skills/hehe-report-presentation",
+      "steps": [
+        {
+          "stepIndex": 1,
+          "description": "锁定内容",
+          "evidence": {
+            "type": "evidence",
+            "filePath": "skills/hehe-report-presentation/SKILL.md",
+            "lineStart": 26,
+            "lineEnd": 26,
+            "quote": "保留原稿，建立正文段落、表格单元、数据与来源的对应记录。"
+          }
+        },
+        {
+          "stepIndex": 2,
+          "description": "先选图，再编排正文",
+          "evidence": {
+            "type": "evidence",
+            "filePath": "skills/hehe-report-presentation/SKILL.md",
+            "lineStart": 27,
+            "lineEnd": 28,
+            "quote": "识别每个正文页或下拉模块的资金与数据流、阶段、条件分支、结构或数值关系，优先采用对应图式。"
+          }
+        },
+        {
+          "stepIndex": 3,
+          "description": "确定交付形态",
+          "evidence": {
+            "type": "evidence",
+            "filePath": "skills/hehe-report-presentation/SKILL.md",
+            "lineStart": 30,
+            "lineEnd": 30,
+            "quote": "按 [多形态交付.md](references/多形态交付.md) 选择画布与阅读样式。"
+          }
+        }
+      ]
+    },
+    {
+      "unitPath": "skills/hehe-report-writing",
+      "steps": [
+        {
+          "stepIndex": 1,
+          "description": "确认任务契约",
+          "evidence": {
+            "type": "evidence",
+            "filePath": "skills/hehe-report-writing/SKILL.md",
+            "lineStart": 51,
+            "lineEnd": 51,
+            "quote": "识别输入材料、目标读者、使用场景、写作单位和篇幅要求。"
+          }
+        },
+        {
+          "stepIndex": 2,
+          "description": "忠实组织内容",
+          "evidence": {
+            "type": "evidence",
+            "filePath": "skills/hehe-report-writing/SKILL.md",
+            "lineStart": 65,
+            "lineEnd": 65,
+            "quote": "保持用户材料的事实、立场和结论强度"
+          }
+        },
+        {
+          "stepIndex": 3,
+          "description": "形成报告表达",
+          "evidence": {
+            "type": "evidence",
+            "filePath": "skills/hehe-report-writing/SKILL.md",
+            "lineStart": 78,
+            "lineEnd": 78,
+            "quote": "商业计划书和研究报告的叙事标题与正文使用陈述句"
+          }
+        }
+      ]
+    },
+    {
+      "unitPath": "skills/hehe-trend-analysis",
+      "steps": [
+        {
+          "stepIndex": 1,
+          "description": "确定任务与研究范围",
+          "evidence": {
+            "type": "evidence",
+            "filePath": "skills/hehe-trend-analysis/SKILL.md",
+            "lineStart": 62,
+            "lineEnd": 62,
+            "quote": "确定任务与研究范围"
+          }
+        },
+        {
+          "stepIndex": 2,
+          "description": "整理证据并观察变化",
+          "evidence": {
+            "type": "evidence",
+            "filePath": "skills/hehe-trend-analysis/SKILL.md",
+            "lineStart": 76,
+            "lineEnd": 76,
+            "quote": "建立信号登记表"
+          }
+        },
+        {
+          "stepIndex": 3,
+          "description": "判断趋势是否成立及所处状态",
+          "evidence": {
+            "type": "evidence",
+            "filePath": "skills/hehe-trend-analysis/SKILL.md",
+            "lineStart": 108,
+            "lineEnd": 108,
+            "quote": "阶段是证据结论，不由固定渗透率或增速阈值决定。"
+          }
+        }
+      ]
+    },
+    {
+      "unitPath": "skills/hehe-valuation-analysis",
+      "steps": [
+        {
+          "stepIndex": 1,
+          "description": "确认估值对象、价值口径、资本结构、币种、估值时点和决策用途",
+          "evidence": {
+            "type": "evidence",
+            "filePath": "skills/hehe-valuation-analysis/SKILL.md",
+            "lineStart": 49,
+            "lineEnd": 49,
+            "quote": "确认估值对象、价值口径、资本结构、币种、估值时点和决策用途；"
+          }
+        },
+        {
+          "stepIndex": 2,
+          "description": "整理估值输入并区分事实与假设",
+          "evidence": {
+            "type": "evidence",
+            "filePath": "skills/hehe-valuation-analysis/SKILL.md",
+            "lineStart": 105,
+            "lineEnd": 105,
+            "quote": "建立估值资料与假设表"
+          }
+        },
+        {
+          "stepIndex": 3,
+          "description": "选择估值方法并记录关键信息",
+          "evidence": {
+            "type": "evidence",
+            "filePath": "skills/hehe-valuation-analysis/SKILL.md",
+            "lineStart": 128,
+            "lineEnd": 128,
+            "quote": "对候选方法逐一记录"
+          }
+        },
+        {
+          "stepIndex": 4,
+          "description": "交付分析成果",
+          "evidence": {
+            "type": "evidence",
+            "filePath": "skills/hehe-valuation-analysis/SKILL.md",
+            "lineStart": 27,
+            "lineEnd": 27,
+            "quote": "交付时读取 [估值分析交付模板](references/估值分析交付模板.md)，按模板完成本专项成果"
+          }
+        }
+      ]
+    }
+  ],
+  "l3_delivery_rules": {
+    "acceptance_rules": [
+      {
+        "rule": "必须形成可复算的财务模型或逻辑证据，确保分析结论具备可追溯性。",
+        "evidence": {
+          "type": "evidence",
+          "filePath": "skills/hehe-valuation-analysis/SKILL.md",
+          "lineStart": 34,
+          "lineEnd": 34,
+          "quote": "用户要求完整、深度或系统研究，或本专项作为 hehe-industry-researcher 完整研究中的适用模块时，必须先形成独立完整专项报告"
+        }
+      },
+      {
+        "rule": "所有专项报告必须遵循统一的 Markdown 成稿格式，并支持 HTML 阅读版转换。",
+        "evidence": {
+          "type": "evidence",
+          "filePath": "skills/hehe-industry-researcher/SKILL.md",
+          "lineStart": 4,
+          "lineEnd": 6,
+          "quote": "负责把研究开题、公开信息搜索、材料审核、行业或企业分析、Markdown 成稿及 HTML 报告交付整合成一条完整路线"
+        }
+      }
+    ],
+    "delivery_formats": [
+      "Markdown",
+      "HTML",
+      "Excel 模型",
+      "Mermaid 图表",
+      "PPTX"
+    ]
+  },
+  "unit_cards": {
+    "/": {
+      "unitPath": "/",
+      "instructionFile": "README.md",
+      "role": "entry_router",
+      "purpose": "统筹一套包含 16 项 Skill 的中文行业与企业研究工作流，负责开题、搜索组织、材料审核、专项验收和最终整合。",
+      "activation_conditions": {
+        "when_to_use": [
+          "完整研究开题",
+          "搜索组织",
+          "材料审核",
+          "专项验收",
+          "最终整合"
+        ],
+        "when_not_to_use": [
+          "单一专项直接调用"
+        ]
+      },
+      "declared_independence": false,
+      "inputs": [
+        "研究任务",
+        "公开信息"
+      ],
+      "outputs": [
+        "完整研究报告",
+        "专项分析成果"
+      ],
+      "external_dependencies": [
+        "baojie",
+        "13个研究专项",
+        "2个报告交付Skill"
+      ],
+      "runtime_requirements": [
+        "更新组合包的 hehe-industry-researcher 完整目录"
+      ],
+      "non_goals": [
+        "不随本组合打包保洁(baojie)"
+      ],
+      "l2_internal_workflow": [
+        {
+          "stepIndex": 1,
+          "description": "通过总入口统一管理项目，调用 13 个专项 Skill。",
+          "evidence": {
+            "type": "evidence",
+            "filePath": "README.md",
+            "lineStart": 11,
+            "lineEnd": 11,
+            "quote": "它由 `hehe-industry-researcher` 管理项目，再按任务调用市场规模、产业链、商业模式、竞争格局、财务、估值等 13 个专项 Skill。"
+          }
+        }
+      ],
+      "evidenceTags": [
+        {
+          "type": "evidence",
+          "filePath": "README.md",
+          "lineStart": 3,
+          "lineEnd": 3,
+          "quote": "一套由总入口统筹、13 个专项 Skill 协同执行的中文行业与企业研究工作流。"
+        }
+      ],
+      "analysisSource": "model",
+      "analysisNote": "来源：模型批量理解"
+    },
+    "skills/hehe-business-model": {
+      "unitPath": "skills/hehe-business-model",
+      "instructionFile": "skills/hehe-business-model/SKILL.md",
+      "role": "specialist",
+      "purpose": "研究行业或企业的商业模式、组合方式、演变趋势与护城河，并交付商业模式分析报告。",
+      "activation_conditions": {
+        "when_to_use": [
+          "用户直接提出商业模式分析问题",
+          "hehe-industry-researcher 派发任务卡"
+        ],
+        "when_not_to_use": [
+          "用户明确要求局部/简版且资料不支持完整分析时"
+        ]
+      },
+      "declared_independence": true,
+      "inputs": [
+        "研究对象",
+        "任务卡",
+        "材料索引"
+      ],
+      "outputs": [
+        "商业模式分析报告",
+        "公式 Excel"
+      ],
+      "external_dependencies": [
+        "hehe-industry-researcher",
+        "专项工作流程",
+        "商业模式分析交付模板",
+        "商业模式核心分析方法"
+      ],
+      "runtime_requirements": [
+        "读取专项工作流程",
+        "读取商业模式分析交付模板"
+      ],
+      "non_goals": [
+        "不进行未经解释的互斥分类",
+        "不把几家公司代替行业全貌"
+      ],
+      "l2_internal_workflow": [
+        {
+          "stepIndex": 1,
+          "description": "读取材料并按任务卡或独立对话确认研究对象。",
+          "evidence": {
+            "type": "evidence",
+            "filePath": "skills/hehe-business-model/SKILL.md",
+            "lineStart": 17,
+            "lineEnd": 17,
+            "quote": "收到任务卡和材料索引后直接读取材料并执行，不重新启动路由。"
+          }
+        }
+      ],
+      "evidenceTags": [
+        {
+          "type": "evidence",
+          "filePath": "skills/hehe-business-model/SKILL.md",
+          "lineStart": 5,
+          "lineEnd": 5,
+          "quote": "盒子原创行业研究 Skill 组合中的商业模式分析专项。"
+        }
+      ],
+      "analysisSource": "model",
+      "analysisNote": "来源：模型批量理解"
+    },
+    "skills/hehe-company-profile": {
+      "unitPath": "skills/hehe-company-profile",
+      "instructionFile": "skills/hehe-company-profile/SKILL.md",
+      "role": "specialist",
+      "purpose": "建立一家企业或经营主体的可追溯经营画像，分析经营基本面与成长驱动。",
+      "activation_conditions": {
+        "when_to_use": [
+          "建立公司经营画像",
+          "梳理公司业务、客户供应商和商业化进展",
+          "分析公司经营质量或成长驱动"
+        ],
+        "when_not_to_use": [
+          "非公司经营画像相关分析"
+        ]
+      },
+      "declared_independence": true,
+      "inputs": [
+        "研究对象",
+        "研究范围",
+        "地域时间要求"
+      ],
+      "outputs": [
+        "公司画像专项报告",
+        "经营事实表"
+      ],
+      "external_dependencies": [
+        "hehe-industry-researcher",
+        "专项工作流程",
+        "公司画像交付模板",
+        "公司底座与财务画像"
+      ],
+      "runtime_requirements": [
+        "确认法定主体、上市主体及经营主体"
+      ],
+      "non_goals": [
+        "不作为公司百科",
+        "不重建标准化财务三表",
+        "不展开完整比率体系"
+      ],
+      "l2_internal_workflow": [
+        {
+          "stepIndex": 1,
+          "description": "建立公司底座并确认研究范围。",
+          "evidence": {
+            "type": "evidence",
+            "filePath": "skills/hehe-company-profile/SKILL.md",
+            "lineStart": 34,
+            "lineEnd": 34,
+            "quote": "先确认法定主体、上市主体、控股集团、实际经营主体、品牌、产品和业务分部，避免混称"
+          }
+        }
+      ],
+      "evidenceTags": [
+        {
+          "type": "evidence",
+          "filePath": "skills/hehe-company-profile/SKILL.md",
+          "lineStart": 5,
+          "lineEnd": 5,
+          "quote": "建立一家企业或经营主体的可追溯经营画像"
+        }
+      ],
+      "analysisSource": "model",
+      "analysisNote": "来源：模型批量理解"
+    },
+    "skills/hehe-competitive-landscape": {
+      "unitPath": "skills/hehe-competitive-landscape",
+      "instructionFile": "skills/hehe-competitive-landscape/SKILL.md",
+      "role": "specialist",
+      "purpose": "梳理竞争格局、市场份额、集中度及横向比较企业竞争优势。",
+      "activation_conditions": {
+        "when_to_use": [
+          "分析竞争格局",
+          "计算市场份额或集中度",
+          "比较龙头、挑战者或竞品"
+        ],
+        "when_not_to_use": [
+          "超出竞争格局研究范围的通用财务分析"
+        ]
+      },
+      "declared_independence": true,
+      "inputs": [
+        "行业细分市场定义",
+        "企业名单",
+        "竞争维度"
+      ],
+      "outputs": [
+        "竞争格局分析报告",
+        "二维定位图",
+        "能力矩阵"
+      ],
+      "external_dependencies": [
+        "hehe-industry-researcher",
+        "专项工作流程",
+        "竞争格局分析交付模板",
+        "竞争定位图与能力矩阵"
+      ],
+      "runtime_requirements": [
+        "数据口径统一",
+        "时间地域一致性校验"
+      ],
+      "non_goals": [
+        "不设标的企业(行业研究)",
+        "不依赖其他制图Skill"
+      ],
+      "l2_internal_workflow": [
+        {
+          "stepIndex": 1,
+          "description": "明确行业细分市场与参与者。",
+          "evidence": {
+            "type": "evidence",
+            "filePath": "skills/hehe-competitive-landscape/SKILL.md",
+            "lineStart": 33,
+            "lineEnd": 33,
+            "quote": "明确研究什么行业或细分市场、包含哪些产品与客户，以及地域、时间和相关渠道。"
+          }
+        }
+      ],
+      "evidenceTags": [
+        {
+          "type": "evidence",
+          "filePath": "skills/hehe-competitive-landscape/SKILL.md",
+          "lineStart": 5,
+          "lineEnd": 5,
+          "quote": "行业研究梳理参与企业、份额、集中度及变化，按共同维度横向比较核心企业"
+        }
+      ],
+      "analysisSource": "model",
+      "analysisNote": "来源：模型批量理解"
+    },
+    "skills/hehe-financial-analysis": {
+      "unitPath": "skills/hehe-financial-analysis",
+      "instructionFile": "skills/hehe-financial-analysis/SKILL.md",
+      "role": "specialist",
+      "purpose": "负责企业财报、附注和经营数据的重构与分析，诊断增长、盈利、现金流、资产质量及财务风险，并提供预测与压力测试模型。",
+      "activation_conditions": {
+        "when_to_use": [
+          "用户直接要求“分析公司财务或三表”",
+          "解释业绩变化、盈利质量和现金流",
+          "检查营运资本、ROIC、债务风险或异常科目",
+          "由 hehe-industry-researcher 派发任务卡时"
+        ],
+        "when_to_use_not": [
+          "不用于估值或投资建议",
+          "不负责完整商业模式研究、治理决策评价及法定审计"
+        ]
+      },
+      "declared_independence": true,
+      "inputs": [
+        "财报、附注、经营数据",
+        "任务卡与材料索引",
+        "专项工作流程"
+      ],
+      "outputs": [
+        "正式财务分析报告",
+        "财务分析工作底表",
+        "三表重构模型",
+        "预测与压力测试模型"
+      ],
+      "external_dependencies": [
+        "references/财务分析交付模板.md",
+        "references/财务口径、公式与工作底表.md",
+        "references/企业财务诊断方法.md",
+        "references/三表重构与预测模型.md",
+        "references/会计质量与异常核查.md",
+        "references/行业财务口径适配.md",
+        "references/无完整财报企业的财务分析.md",
+        "references/专项工作流程.md"
+      ],
+      "runtime_requirements": [
+        "读取专项工作流程",
+        "按交付模板组织章节",
+        "处理重述、合并处置与汇率变化",
+        "建立财务分析范围表"
+      ],
+      "non_goals": [
+        "估值",
+        "投资建议",
+        "完整商业模式研究",
+        "法定审计",
+        "跨专项综合报告/PPT"
+      ],
+      "l2_internal_workflow": [
+        {
+          "stepIndex": 1,
+          "description": "确认范围，整理原值和版本",
+          "evidence": {
+            "type": "evidence",
+            "filePath": "skills/hehe-financial-analysis/SKILL.md",
+            "lineStart": 113,
+            "lineEnd": 113,
+            "quote": "建立财务分析范围表"
+          }
+        },
+        {
+          "stepIndex": 2,
+          "description": "标准化三表、分部并完成勾稽",
+          "evidence": {
+            "type": "evidence",
+            "filePath": "skills/hehe-financial-analysis/SKILL.md",
+            "lineStart": 139,
+            "lineEnd": 139,
+            "quote": "标准化三表、分部并完成勾稽"
+          }
+        },
+        {
+          "stepIndex": 3,
+          "description": "解释增长、利润、现金和营运资本",
+          "evidence": {
+            "type": "evidence",
+            "filePath": "skills/hehe-financial-analysis/SKILL.md",
+            "lineStart": 145,
+            "lineEnd": 145,
+            "quote": "解释增长、利润、现金和营运资本"
+          }
+        }
+      ],
+      "evidenceTags": [
+        {
+          "type": "evidence",
+          "filePath": "skills/hehe-financial-analysis/SKILL.md",
+          "lineStart": 5,
+          "lineEnd": 6,
+          "quote": "重构并勾稽利润表、资产负债表和现金流量表，诊断增长、盈利、现金转换、资产质量、资本效率、债务与会计质量"
+        }
+      ],
+      "analysisSource": "model",
+      "analysisNote": "来源：模型批量理解"
+    },
+    "skills/hehe-governance-capital-allocation": {
+      "unitPath": "skills/hehe-governance-capital-allocation",
+      "instructionFile": "skills/hehe-governance-capital-allocation/SKILL.md",
+      "role": "specialist",
+      "purpose": "分析公司治理与资本配置，判断决策权约束、激励机制、关联交易及资本开支使用质量。",
+      "activation_conditions": {
+        "when_to_use": [
+          "分析公司治理或实际控制人",
+          "评估股权激励、关联交易、并购、融资、分红、回购或资本开支",
+          "由 hehe-industry-researcher 派发任务卡时"
+        ],
+        "when_to_use_not": [
+          "法律裁决、法律/合规意见或专业审计",
+          "输出目标价、交易价格或买卖仓位建议"
+        ]
+      },
+      "declared_independence": true,
+      "inputs": [
+        "公司治理文档",
+        "交易公告",
+        "薪酬报告",
+        "审计与内控报告"
+      ],
+      "outputs": [
+        "治理与资本配置 Markdown 专项报告",
+        "控制权图",
+        "资本配置复盘底表"
+      ],
+      "external_dependencies": [
+        "references/治理与资本配置分析底表.md",
+        "references/专项工作流程.md",
+        "references/治理与资本配置分析交付模板.md"
+      ],
+      "runtime_requirements": [
+        "识别实际控制机制",
+        "建立分析范围表",
+        "拆解经济利益、表决权、任免权与事实影响力"
+      ],
+      "non_goals": [
+        "估值与财务建模",
+        "法律/审计意见",
+        "交易价格/仓位建议"
+      ],
+      "l2_internal_workflow": [
+        {
+          "stepIndex": 1,
+          "description": "拆开四类权利",
+          "evidence": {
+            "type": "evidence",
+            "filePath": "skills/hehe-governance-capital-allocation/SKILL.md",
+            "lineStart": 122,
+            "lineEnd": 122,
+            "quote": "拆开四类权利"
+          }
+        },
+        {
+          "stepIndex": 2,
+          "description": "建立控制权链和变化时间轴",
+          "evidence": {
+            "type": "evidence",
+            "filePath": "skills/hehe-governance-capital-allocation/SKILL.md",
+            "lineStart": 133,
+            "lineEnd": 133,
+            "quote": "建立控制权链和变化时间轴"
+          }
+        },
+        {
+          "stepIndex": 3,
+          "description": "分析激励、约束与利益冲突",
+          "evidence": {
+            "type": "evidence",
+            "filePath": "skills/hehe-governance-capital-allocation/SKILL.md",
+            "lineStart": 141,
+            "lineEnd": 141,
+            "quote": "分析激励、约束与利益冲突"
+          }
+        }
+      ],
+      "evidenceTags": [
+        {
+          "type": "evidence",
+          "filePath": "skills/hehe-governance-capital-allocation/SKILL.md",
+          "lineStart": 5,
+          "lineEnd": 6,
+          "quote": "判断公司的实际控制权与决策机制、管理层和股东激励、少数股东保护、关联交易及资本配置历史质量"
+        }
+      ],
+      "analysisSource": "model",
+      "analysisNote": "来源：模型批量理解"
+    },
+    "skills/hehe-industry-chain-map": {
+      "unitPath": "skills/hehe-industry-chain-map",
+      "instructionFile": "skills/hehe-industry-chain-map/SKILL.md",
+      "role": "specialist",
+      "purpose": "梳理产业链的价值流向、功能环节、角色关系与企业图谱，分析供应链瓶颈与价值迁移。",
+      "activation_conditions": {
+        "when_to_use": [
+          "分析产业链或价值链",
+          "梳理上下游关系或企业图谱",
+          "判断供应链卡点",
+          "绘制产业链图"
+        ],
+        "when_to_use_not": [
+          "不以 Logo 墙或企业排名代替分析"
+        ]
+      },
+      "declared_independence": true,
+      "inputs": [
+        "产业链相关数据",
+        "行业研究索引",
+        "专项工作流程"
+      ],
+      "outputs": [
+        "产业链 Markdown 分析报告",
+        "可编辑产业链 Mermaid 图"
+      ],
+      "external_dependencies": [
+        "references/专项工作流程.md",
+        "references/产业链分析交付模板.md",
+        "references/产业链图绘制规范.md"
+      ],
+      "runtime_requirements": [
+        "分清功能链、角色链与企业图谱",
+        "保留 Mermaid 图源",
+        "建立分析配置卡"
+      ],
+      "non_goals": [
+        "Logo 墙拼凑",
+        "简单企业排名"
+      ],
+      "l2_internal_workflow": [
+        {
+          "stepIndex": 1,
+          "description": "明确分析范围和产业链任务",
+          "evidence": {
+            "type": "evidence",
+            "filePath": "skills/hehe-industry-chain-map/SKILL.md",
+            "lineStart": 62,
+            "lineEnd": 62,
+            "quote": "明确分析范围和产业链要完成的任务"
+          }
+        },
+        {
+          "stepIndex": 2,
+          "description": "拆必要功能，建立功能链和结构拓扑",
+          "evidence": {
+            "type": "evidence",
+            "filePath": "skills/hehe-industry-chain-map/SKILL.md",
+            "lineStart": 89,
+            "lineEnd": 89,
+            "quote": "先拆必要功能，建立功能链和结构拓扑"
+          }
+        },
+        {
+          "stepIndex": 3,
+          "description": "按参与角色重画上下游关系",
+          "evidence": {
+            "type": "evidence",
+            "filePath": "skills/hehe-industry-chain-map/SKILL.md",
+            "lineStart": 113,
+            "lineEnd": 113,
+            "quote": "按参与角色重画上下游关系"
+          }
+        }
+      ],
+      "evidenceTags": [
+        {
+          "type": "evidence",
+          "filePath": "skills/hehe-industry-chain-map/SKILL.md",
+          "lineStart": 5,
+          "lineEnd": 5,
+          "quote": "梳理行业或企业所在链条的功能、角色、上下游关系与代表企业，分析成本、利润、瓶颈和技术替代"
+        }
+      ],
+      "analysisSource": "model",
+      "analysisNote": "来源：模型批量理解"
+    },
+    "skills/hehe-industry-drivers": {
+      "unitPath": "skills/hehe-industry-drivers",
+      "instructionFile": "skills/hehe-industry-drivers/SKILL.md",
+      "role": "specialist",
+      "purpose": "行业驱动力分析，解释收入、销量、利润等结构变化的原因，归因分析并核查传导机制。",
+      "activation_conditions": {
+        "when_to_use": [
+          "分析行业驱动力",
+          "解释增长或下滑原因",
+          "进行多因素归因",
+          "什么在推动或抑制这个行业"
+        ],
+        "when_to_use_not": [
+          "不能把政策、技术等词直接当结论",
+          "不能反向改写输入事实"
+        ]
+      },
+      "declared_independence": true,
+      "inputs": [
+        "行业统计数据",
+        "经营指标",
+        "政策信息",
+        "市场量价"
+      ],
+      "outputs": [
+        "驱动力归因分析报告",
+        "核心路径传导图"
+      ],
+      "external_dependencies": [
+        "references/行业驱动力分析工作表.md",
+        "references/专项工作流程.md",
+        "references/行业结果拆解与量化归因方法.md",
+        "references/行业驱动力分析交付模板.md"
+      ],
+      "runtime_requirements": [
+        "明确可观察的行业结果",
+        "构建驱动力因果路径",
+        "进行反事实分析"
+      ],
+      "non_goals": [
+        "简单相加驱动力",
+        "通过相关系数强行判定因果"
+      ],
+      "l2_internal_workflow": [
+        {
+          "stepIndex": 1,
+          "description": "确定要解释的结果",
+          "evidence": {
+            "type": "evidence",
+            "filePath": "skills/hehe-industry-drivers/SKILL.md",
+            "lineStart": 63,
+            "lineEnd": 63,
+            "quote": "确定要解释的结果"
+          }
+        },
+        {
+          "stepIndex": 2,
+          "description": "拆解结果并寻找候选驱动",
+          "evidence": {
+            "type": "evidence",
+            "filePath": "skills/hehe-industry-drivers/SKILL.md",
+            "lineStart": 72,
+            "lineEnd": 72,
+            "quote": "拆解结果并寻找候选驱动"
+          }
+        },
+        {
+          "stepIndex": 3,
+          "description": "核查驱动路径",
+          "evidence": {
+            "type": "evidence",
+            "filePath": "skills/hehe-industry-drivers/SKILL.md",
+            "lineStart": 86,
+            "lineEnd": 86,
+            "quote": "核查驱动路径"
+          }
+        }
+      ],
+      "evidenceTags": [
+        {
+          "type": "evidence",
+          "filePath": "skills/hehe-industry-drivers/SKILL.md",
+          "lineStart": 5,
+          "lineEnd": 6,
+          "quote": "用于解释行业收入、销量、价格、利润、渗透率、供给或结构变化为何发生：先拆解需要解释的结果，再识别并核查需求、供给、价格与成本、技术、渠道、政策制度等驱动"
+        }
+      ],
+      "analysisSource": "model",
+      "analysisNote": "来源：模型批量理解"
+    },
+    "skills/hehe-industry-pain-points": {
+      "unitPath": "skills/hehe-industry-pain-points",
+      "instructionFile": "skills/hehe-industry-pain-points/SKILL.md",
+      "role": "specialist",
+      "purpose": "负责行业痛点分析专项，识别参与者在特定任务或节点上的现实损失及替代方案的局限性。",
+      "activation_conditions": {
+        "when_to_use": [
+          "由 hehe-industry-researcher 派发任务卡时",
+          "用户直接提出分析行业痛点、瓶颈或障碍等问题时"
+        ],
+        "when_not_to_use": [
+          "不要把抱怨、需求、风险、供应商卖点或行业难题清单直接命名为痛点"
+        ]
+      },
+      "declared_independence": true,
+      "inputs": [
+        "研究对象",
+        "研究范围",
+        "地域/时间/用户口径",
+        "已有材料"
+      ],
+      "outputs": [
+        "痛点分析专项报告",
+        "分析表"
+      ],
+      "external_dependencies": [
+        "references/行业痛点分析工作表.md",
+        "references/专项工作流程.md",
+        "references/行业痛点分析交付模板.md"
+      ],
+      "runtime_requirements": [
+        "完整交付原则",
+        "需核对替代方案缺陷"
+      ],
+      "non_goals": [
+        "完整信源评级",
+        "无关案例库重编码",
+        "市场规模分析",
+        "产品设计/战略/投资结论"
+      ],
+      "l2_internal_workflow": [
+        {
+          "stepIndex": 1,
+          "description": "明确范围、承担者与任务",
+          "evidence": {
+            "type": "evidence",
+            "filePath": "skills/hehe-industry-pain-points/SKILL.md",
+            "lineStart": 69,
+            "lineEnd": 71,
+            "quote": "承担者 × 任务/流程/产业节点 × 情境 × 时间窗口"
+          }
+        },
+        {
+          "stepIndex": 2,
+          "description": "整理候选并选用分析方式",
+          "evidence": {
+            "type": "evidence",
+            "filePath": "skills/hehe-industry-pain-points/SKILL-MD",
+            "lineStart": 77,
+            "lineEnd": 86,
+            "quote": "需求、抱怨/情绪/反馈、流程摩擦、产业瓶颈、经营约束、风险、产品卖点/节省承诺、行业痛点"
+          }
+        }
+      ],
+      "evidenceTags": [
+        {
+          "type": "evidence",
+          "filePath": "skills/hehe-industry-pain-points/SKILL.md",
+          "lineStart": 4,
+          "lineEnd": 6,
+          "quote": "辨析不同参与者在明确任务、流程或产业节点上反复、持续，或在关键时点承担的时间、成本、收入、结果、风险或责任损失"
+        }
+      ],
+      "analysisSource": "model",
+      "analysisNote": "来源：模型批量理解"
+    },
+    "skills/hehe-industry-researcher": {
+      "unitPath": "skills/hehe-industry-researcher",
+      "instructionFile": "skills/hehe-industry-researcher/SKILL.md",
+      "role": "entry_router",
+      "purpose": "行业与企业研究的总路由，负责整合开题、搜索、分析、交付全流程。",
+      "activation_conditions": {
+        "when_to_use": [
+          "当用户说“研究/分析/调研某行业”“研究某公司/企业”或明显需要多个专项共同完成时"
+        ],
+        "when_not_to_use": [
+          "用户直接点名某个专项 Skill 时由该专项独立执行"
+        ]
+      },
+      "declared_independence": false,
+      "inputs": [
+        "研究对象",
+        "研究范围",
+        "问题边界"
+      ],
+      "outputs": [
+        "Markdown 定稿报告",
+        "HTML 阅读版"
+      ],
+      "external_dependencies": [
+        "references/研究开题流程.md",
+        "references/研究项目目录模板.md",
+        "references/信息搜索流程.md"
+      ],
+      "runtime_requirements": [
+        "必须先集中提出开题问题并等待用户答复",
+        "需建立研究文件夹"
+      ],
+      "non_goals": [
+        "设计访谈和问卷",
+        "分析一手用户样本",
+        "新闻稿或公众号文章撰写",
+        "个性化证券买卖建议"
+      ],
+      "l2_internal_workflow": [
+        {
+          "stepIndex": 1,
+          "description": "研究开题阶段",
+          "evidence": {
+            "type": "evidence",
+            "filePath": "skills/hehe-industry-researcher/SKILL.md",
+            "lineStart": 96,
+            "lineEnd": 98,
+            "quote": "第一次实质响应必须先集中提出开题问题并等待用户答复。"
+          }
+        },
+        {
+          "stepIndex": 2,
+          "description": "信息搜索与审核阶段",
+          "evidence": {
+            "type": "evidence",
+            "filePath": "skills/hehe-industry-researcher/SKILL.md",
+            "lineStart": 113,
+            "lineEnd": 115,
+            "quote": "根据研究问题和已有材料，设计搜索方向、关键词和需收集的字段"
+          }
+        }
+      ],
+      "evidenceTags": [
+        {
+          "type": "evidence",
+          "filePath": "skills/hehe-industry-researcher/SKILL.md",
+          "lineStart": 4,
+          "lineEnd": 6,
+          "quote": "负责把研究开题、公开信息搜索、材料审核、行业或企业分析、Markdown 成稿及 HTML 报告交付整合成一条完整路线"
+        }
+      ],
+      "analysisSource": "model",
+      "analysisNote": "来源：模型批量理解"
+    },
+    "skills/hehe-investment-logic": {
+      "unitPath": "skills/hehe-investment-logic",
+      "instructionFile": "skills/hehe-investment-logic/SKILL.md",
+      "role": "specialist",
+      "purpose": "投资逻辑分析专项，判断投资价值、路径及退出条件。",
+      "activation_conditions": {
+        "when_to_use": [
+          "由 hehe-industry-researcher 派发任务卡时",
+          "用户直接提出投资逻辑、赛道公司投资价值分析时"
+        ],
+        "when_not_to_use": [
+          "不提供个性化买卖、仓位、目标价或收益承诺"
+        ]
+      },
+      "declared_independence": true,
+      "inputs": [
+        "研究场景",
+        "投资方式",
+        "投资目的"
+      ],
+      "outputs": [
+        "投资逻辑专项报告"
+      ],
+      "external_dependencies": [
+        "references/五类研究对象分析模式.md",
+        "references/投资逻辑分析方法.md",
+        "references/投资方式与交易路径.md"
+      ],
+      "runtime_requirements": [
+        "需明确投资吸引力与执行路径",
+        "需识别逻辑失效条件"
+      ],
+      "non_goals": [
+        "个性化证券买卖建议",
+        "提供目标价或收益承诺"
+      ],
+      "l2_internal_workflow": [
+        {
+          "stepIndex": 1,
+          "description": "确认研究场景",
+          "evidence": {
+            "type": "evidence",
+            "filePath": "skills/hehe-investment-logic/SKILL.md",
+            "lineStart": 49,
+            "lineEnd": 55,
+            "quote": "A. 行业机会、B. 企业、C. 项目、D. 上市证券、E. 具体交易、F. 其他"
+          }
+        },
+        {
+          "stepIndex": 2,
+          "description": "回答投资五问",
+          "evidence": {
+            "type": "evidence",
+            "filePath": "skills/hehe-investment-logic/SKILL.md",
+            "lineStart": 36,
+            "lineEnd": 40,
+            "quote": "是否值得投；可以通过什么方式进入；为什么现在投；回报靠什么实现；什么信号会让逻辑失效。"
+          }
+        }
+      ],
+      "evidenceTags": [
+        {
+          "type": "evidence",
+          "filePath": "skills/hehe-investment-logic/SKILL.md",
+          "lineStart": 4,
+          "lineEnd": 8,
+          "quote": "分析行业机会、企业、项目、上市证券或具体交易是否值得投资、是否实际可进入"
+        }
+      ],
+      "analysisSource": "model",
+      "analysisNote": "来源：模型批量理解"
+    },
+    "skills/hehe-market-sizing": {
+      "unitPath": "skills/hehe-market-sizing",
+      "instructionFile": "skills/hehe-market-sizing/SKILL.md",
+      "role": "specialist",
+      "purpose": "市场规模测算专项，提供多角度测算公式与模型分析。",
+      "activation_conditions": {
+        "when_to_use": [
+          "用户要求测算市场规模、推算市场空间时"
+        ],
+        "when_not_to_use": [
+          "不执行访谈、问卷等一线调研"
+        ]
+      },
+      "declared_independence": true,
+      "inputs": [
+        "测算目的",
+        "业务范围",
+        "已有材料"
+      ],
+      "outputs": [
+        "Markdown 市场规模报告",
+        "含公式的 Excel 模型"
+      ],
+      "external_dependencies": [
+        "references/市场机会与口径术语.md",
+        "references/测算方法详解.md",
+        "references/测算参考示例.md"
+      ],
+      "runtime_requirements": [
+        "需提供基准情景及上下边界",
+        "参数需来源明确且具可复算性"
+      ],
+      "non_goals": [
+        "一线调研/访谈",
+        "设计问卷"
+      ],
+      "l2_internal_workflow": [
+        {
+          "stepIndex": 1,
+          "description": "选择测算角度",
+          "evidence": {
+            "type": "evidence",
+            "filePath": "skills/hehe-market-sizing/SKILL.md",
+            "lineStart": 33,
+            "lineEnd": 42,
+            "quote": "市场机会、交易与经营规模、采购与预算、财政与经费、已有规模续算、宏观与行业统计拆分、保有量与更替、类比与代理指标"
+          }
+        },
+        {
+          "stepIndex": 2,
+          "description": "参数整理与情景分析",
+          "evidence": {
+            "type": "evidence",
+            "filePath": "skills/hehe-market-sizing/SKILL.md",
+            "lineStart": 62,
+            "lineEnd": 64,
+            "quote": "当关键假设足以改变结果时，至少提供基准情景及上下边界"
+          }
+        }
+      ],
+      "evidenceTags": [
+        {
+          "type": "evidence",
+          "filePath": "skills/hehe-market-sizing/SKILL.md",
+          "lineStart": 4,
+          "lineEnd": 6,
+          "quote": "按问题选择市场机会、交易经营、采购预算等方法，提供公式、参数、情景与敏感性分析"
+        }
+      ],
+      "analysisSource": "model",
+      "analysisNote": "来源：模型批量理解"
+    },
+    "skills/hehe-pest-analysis": {
+      "unitPath": "skills/hehe-pest-analysis",
+      "instructionFile": "skills/hehe-pest-analysis/SKILL.md",
+      "role": "specialist",
+      "purpose": "负责 PEST 外部环境分析专项，分析行业所面临的政治与政策、经济、社会和技术变化及其影响。",
+      "activation_conditions": {
+        "when_to_use": [
+          "由 hehe-industry-researcher 派发任务卡时",
+          "用户直接要求“做 PEST 分析”“做宏观环境分析”等问题时"
+        ],
+        "when_not_to_use": [
+          "用户明确要求局部／简版（除非资料只能支持有限披露）"
+        ]
+      },
+      "declared_independence": true,
+      "inputs": [
+        "任务卡和材料索引",
+        "对话中确定的对象、业务范围、地域、时间、研究目的"
+      ],
+      "outputs": [
+        "独立完整专项报告",
+        "PEST 分析结果汇总表"
+      ],
+      "external_dependencies": [
+        "references/专项工作流程.md",
+        "references/PEST 外部环境分析交付模板.md",
+        "references/P_政策与监管分析方法.md",
+        "references/E_经济环境分析方法.md",
+        "references/S_社会环境分析方法.md",
+        "references/T_技术环境分析方法.md"
+      ],
+      "runtime_requirements": [
+        "[未知]"
+      ],
+      "non_goals": [
+        "不机械凑满四个维度",
+        "不把外部因素直接写成对整个行业统一的“利好”或“利空”",
+        "不给伪精确结论"
+      ],
+      "l2_internal_workflow": [
+        {
+          "stepIndex": 1,
+          "description": "明确研究范围",
+          "evidence": {
+            "type": "evidence",
+            "filePath": "skills/hehe-pest-analysis/SKILL.md",
+            "lineStart": 49,
+            "lineEnd": 51,
+            "quote": "目标行业或细分赛道｜包含与排除｜地域或目标市场｜观察期与判断期｜研究问题｜决策用途｜已有材料"
+          }
+        },
+        {
+          "stepIndex": 2,
+          "description": "选择分析维度和因素",
+          "evidence": {
+            "type": "evidence",
+            "filePath": "skills/hehe-pest-analysis/SKILL.md",
+            "lineStart": 62,
+            "lineEnd": 64,
+            "quote": "先按问题选择维度，再读取对应方法"
+          }
+        },
+        {
+          "stepIndex": 3,
+          "description": "分析因素如何影响行业",
+          "evidence": {
+            "type": "evidence",
+            "filePath": "skills/hehe-pest-analysis/SKILL.md",
+            "lineStart": 83,
+            "lineEnd": 83,
+            "quote": "对每个重要因素说明"
+          }
+        },
+        {
+          "stepIndex": 4,
+          "description": "形成综合判断",
+          "evidence": {
+            "type": "evidence",
+            "filePath": "skills/hehe-pest-analysis/SKILL.md",
+            "lineStart": 96,
+            "lineEnd": 96,
+            "quote": "综合 P、E、S、T 的结果，回答"
+          }
+        }
+      ],
+      "evidenceTags": [
+        {
+          "type": "evidence",
+          "filePath": "skills/hehe-pest-analysis/SKILL.md",
+          "lineStart": 4,
+          "lineEnd": 4,
+          "quote": "盒子原创行业研究 Skill 组合中的 PEST 外部环境分析专项。"
+        }
+      ],
+      "analysisSource": "model",
+      "analysisNote": "来源：模型批量理解"
+    },
+    "skills/hehe-report-presentation": {
+      "unitPath": "skills/hehe-report-presentation",
+      "instructionFile": "skills/hehe-report-presentation/SKILL.md",
+      "role": "specialist",
+      "purpose": "将已有商业计划书、行业与企业研究报告等制作成专业报告，负责商业图表与版式设计。",
+      "activation_conditions": {
+        "when_to_use": [
+          "需要将文本论述制作为专业报告",
+          "需要进行 16:9、9:16、A4 或下拉阅读形态的商业交付"
+        ],
+        "when_not_to_use": [
+          "缺乏合格正文或分页脚本时"
+        ]
+      },
+      "declared_independence": true,
+      "inputs": [
+        "已确认正文或分页脚本",
+        "读者、用途、交付形态及品牌要求"
+      ],
+      "outputs": [
+        "翻页 HTML/PDF",
+        "下拉阅读 HTML",
+        "可编辑 PPTX"
+      ],
+      "external_dependencies": [
+        "references/商业报告视觉编排.md",
+        "references/版式与组件选用.md",
+        "references/图形优先与生成检查.md",
+        "references/多形态交付.md",
+        "references/HTML制作与核验.md",
+        "references/可编辑PPT交付.md",
+        "assets/cover_chapter.json",
+        "assets/example.json",
+        "assets/business_layouts.json"
+      ],
+      "runtime_requirements": [
+        "Python",
+        "浏览器",
+        "字体",
+        "验收软件"
+      ],
+      "non_goals": [
+        "不负责文字编辑（由 hehe-report-writing 承接）",
+        "不设每页必有图或全稿图形占比"
+      ],
+      "l2_internal_workflow": [
+        {
+          "stepIndex": 1,
+          "description": "锁定内容",
+          "evidence": {
+            "type": "evidence",
+            "filePath": "skills/hehe-report-presentation/SKILL.md",
+            "lineStart": 26,
+            "lineEnd": 26,
+            "quote": "保留原稿，建立正文段落、表格单元、数据与来源的对应记录。"
+          }
+        },
+        {
+          "stepIndex": 2,
+          "description": "先选图，再编排正文",
+          "evidence": {
+            "type": "evidence",
+            "filePath": "skills/hehe-report-presentation/SKILL.md",
+            "lineStart": 27,
+            "lineEnd": 28,
+            "quote": "识别每个正文页或下拉模块的资金与数据流、阶段、条件分支、结构或数值关系，优先采用对应图式。"
+          }
+        },
+        {
+          "stepIndex": 3,
+          "description": "确定交付形态",
+          "evidence": {
+            "type": "evidence",
+            "filePath": "skills/hehe-report-presentation/SKILL.md",
+            "lineStart": 30,
+            "lineEnd": 30,
+            "quote": "按 [多形态交付.md](references/多形态交付.md) 选择画布与阅读样式。"
+          }
+        }
+      ],
+      "evidenceTags": [
+        {
+          "type": "evidence",
+          "filePath": "skills/hehe-report-presentation/SKILL.md",
+          "lineStart": 4,
+          "lineEnd": 4,
+          "quote": "将已有商业计划书、行业与企业研究报告、用户研究报告或分页脚本制作成专业报告。"
+        }
+      ],
+      "analysisSource": "model",
+      "analysisNote": "来源：模型批量理解"
+    },
+    "skills/hehe-report-writing": {
+      "unitPath": "skills/hehe-report-writing",
+      "instructionFile": "skills/hehe-report-writing/SKILL.md",
+      "role": "specialist",
+      "purpose": "专业研究与咨询文稿写作、润色、审校及分页编排，改善文稿商业严谨性和表达。",
+      "activation_conditions": {
+        "when_to_use": [
+          "需要将已有材料组织为研究计划书或报告",
+          "需要润色、审校文稿或进行分页编排"
+        ],
+        "when_not_to_use": [
+          "涉及搜索和补充资料时",
+          "需要替代专项 Skill 进行深入数据分析时"
+        ]
+      },
+      "declared_independence": false,
+      "inputs": [
+        "研究结论、数据表、图表说明、笔记或页面草稿"
+      ],
+      "outputs": [
+        "连续正文",
+        "分页脚本",
+        "润色/审校后的文稿"
+      ],
+      "external_dependencies": [
+        "references/文本报告独立撰写.md",
+        "references/分页编排与交付.md",
+        "references/商业文稿成文与页面叙事.md",
+        "references/专业编辑方法.md",
+        "references/计划书编辑.md",
+        "references/研究报告编辑.md",
+        "references/改写示例.md",
+        "references/句子与段落编辑.md"
+      ],
+      "runtime_requirements": [
+        "[未知]"
+      ],
+      "non_goals": [
+        "不负责搜索和补充资料",
+        "不代替专项 Skill 重新分析",
+        "不捏造数据或来源"
+      ],
+      "l2_internal_workflow": [
+        {
+          "stepIndex": 1,
+          "description": "确认任务契约",
+          "evidence": {
+            "type": "evidence",
+            "filePath": "skills/hehe-report-writing/SKILL.md",
+            "lineStart": 51,
+            "lineEnd": 51,
+            "quote": "识别输入材料、目标读者、使用场景、写作单位和篇幅要求。"
+          }
+        },
+        {
+          "stepIndex": 2,
+          "description": "忠实组织内容",
+          "evidence": {
+            "type": "evidence",
+            "filePath": "skills/hehe-report-writing/SKILL.md",
+            "lineStart": 65,
+            "lineEnd": 65,
+            "quote": "保持用户材料的事实、立场和结论强度"
+          }
+        },
+        {
+          "stepIndex": 3,
+          "description": "形成报告表达",
+          "evidence": {
+            "type": "evidence",
+            "filePath": "skills/hehe-report-writing/SKILL.md",
+            "lineStart": 78,
+            "lineEnd": 78,
+            "quote": "商业计划书和研究报告的叙事标题与正文使用陈述句"
+          }
+        }
+      ],
+      "evidenceTags": [
+        {
+          "type": "evidence",
+          "filePath": "skills/hehe-report-writing/SKILL.md",
+          "lineStart": 4,
+          "lineEnd": 4,
+          "quote": "专业研究与咨询文稿写作、润色、审校及分页编排。"
+        }
+      ],
+      "analysisSource": "model",
+      "analysisNote": "来源：模型批量理解"
+    },
+    "skills/hehe-trend-analysis": {
+      "unitPath": "skills/hehe-trend-analysis",
+      "instructionFile": "skills/hehe-trend-analysis/SKILL.md",
+      "role": "specialist",
+      "purpose": "行业趋势分析专项，判断行业、技术或需求变化所处阶段、驱动机制及经营后果。",
+      "activation_conditions": {
+        "when_to_use": [
+          "由 hehe-industry-researcher 派发任务卡时",
+          "用户提出趋势分析问题时"
+        ],
+        "when_not_to_use": [
+          "不需要新增材料作为趋势判断事实（仅直接分析已有信息）"
+        ]
+      },
+      "declared_independence": true,
+      "inputs": [
+        "任务对象、范围、地域、时间",
+        "用户口径要求",
+        "已有证据材料"
+      ],
+      "outputs": [
+        "趋势专项成果报告",
+        "信号登记表",
+        "结构化补证任务"
+      ],
+      "external_dependencies": [
+        "references/专项工作流程.md",
+        "references/趋势分析交付模板.md"
+      ],
+      "runtime_requirements": [
+        "[未知]"
+      ],
+      "non_goals": [
+        "趋势不是新闻清单、热词集合、确定性预测或最终行动建议",
+        "不对事实本身重做分析",
+        "不能静默覆盖原始口径"
+      ],
+      "l2_internal_workflow": [
+        {
+          "stepIndex": 1,
+          "description": "确定任务与研究范围",
+          "evidence": {
+            "type": "evidence",
+            "filePath": "skills/hehe-trend-analysis/SKILL.md",
+            "lineStart": 62,
+            "lineEnd": 62,
+            "quote": "确定任务与研究范围"
+          }
+        },
+        {
+          "stepIndex": 2,
+          "description": "整理证据并观察变化",
+          "evidence": {
+            "type": "evidence",
+            "filePath": "skills/hehe-trend-analysis/SKILL.md",
+            "lineStart": 76,
+            "lineEnd": 76,
+            "quote": "建立信号登记表"
+          }
+        },
+        {
+          "stepIndex": 3,
+          "description": "判断趋势是否成立及所处状态",
+          "evidence": {
+            "type": "evidence",
+            "filePath": "skills/hehe-trend-analysis/SKILL.md",
+            "lineStart": 108,
+            "lineEnd": 108,
+            "quote": "阶段是证据结论，不由固定渗透率或增速阈值决定。"
+          }
+        }
+      ],
+      "evidenceTags": [
+        {
+          "type": "evidence",
+          "filePath": "skills/hehe-trend-analysis/SKILL.md",
+          "lineStart": 4,
+          "lineEnd": 4,
+          "quote": "盒子原创行业研究 Skill 组合中的趋势分析专项。"
+        }
+      ],
+      "analysisSource": "model",
+      "analysisNote": "来源：模型批量理解"
+    },
+    "skills/hehe-valuation-analysis": {
+      "unitPath": "skills/hehe-valuation-analysis",
+      "instructionFile": "skills/hehe-valuation-analysis/SKILL.md",
+      "role": "specialist",
+      "purpose": "负责估值分析专项，将经营与财务输入转化为可复算、可解释、可被推翻的价值区间。",
+      "activation_conditions": {
+        "when_to_use": [
+          "用户直接要求“给上市或非上市企业估值”等时独立启动",
+          "由 hehe-industry-researcher 派发任务卡时按组合模式执行"
+        ],
+        "when_to_use_notes": [
+          "独立启动时自行确认范围、搜索并审核材料、分析和交付"
+        ],
+        "when_not_to_use": [
+          "缺少关键输入时输出宽区间或暂不判断，不伪造精细 DCF"
+        ]
+      },
+      "declared_independence": true,
+      "inputs": [
+        "估值对象、价值口径、资本结构、币种、估值时点和决策用途",
+        "经营预测、收入、利润、再投资与现金转换",
+        "市场价格、交易条款、可比公司财务和交易数据"
+      ],
+      "outputs": [
+        "可直接阅读的估值 Markdown 主报告",
+        "价值区间及其成立条件、不可比项、资料缺口",
+        "估值模型与调整桥"
+      ],
+      "external_dependencies": [
+        "hehe-industry-researcher",
+        "references/估值方法、公式与工作底表.md",
+        "references/非上市企业商业尽调估值.md",
+        "references/专项工作流程.md",
+        "references/估值分析交付模板.md"
+      ],
+      "runtime_requirements": [
+        "需在开始前确认对象、研究范围、地域、时间、用户口径要求及已有材料",
+        "交付时必须形成独立完整专项报告（除明确要求简版外）"
+      ],
+      "non_goals": [
+        "承担完整信源评级或专业审计",
+        "重建完整三表、重新评价控制权或替法律顾问解释权利有效性",
+        "提供个性化买卖、仓位、收益承诺或伪精确单点目标价",
+        "跨专项公司或投资综合报告、PPT 及品牌化视觉图表"
+      ],
+      "l2_internal_workflow": [
+        {
+          "stepIndex": 1,
+          "description": "确认估值对象、价值口径、资本结构、币种、估值时点和决策用途",
+          "evidence": {
+            "type": "evidence",
+            "filePath": "skills/hehe-valuation-analysis/SKILL.md",
+            "lineStart": 49,
+            "lineEnd": 49,
+            "quote": "确认估值对象、价值口径、资本结构、币种、估值时点和决策用途；"
+          }
+        },
+        {
+          "stepIndex": 2,
+          "description": "整理估值输入并区分事实与假设",
+          "evidence": {
+            "type": "evidence",
+            "filePath": "skills/hehe-valuation-analysis/SKILL.md",
+            "lineStart": 105,
+            "lineEnd": 105,
+            "quote": "建立估值资料与假设表"
+          }
+        },
+        {
+          "stepIndex": 3,
+          "description": "选择估值方法并记录关键信息",
+          "evidence": {
+            "type": "evidence",
+            "filePath": "skills/hehe-valuation-analysis/SKILL.md",
+            "lineStart": 128,
+            "lineEnd": 128,
+            "quote": "对候选方法逐一记录"
+          }
+        },
+        {
+          "stepIndex": 4,
+          "description": "交付分析成果",
+          "evidence": {
+            "type": "evidence",
+            "filePath": "skills/hehe-valuation-analysis/SKILL.md",
+            "lineStart": 27,
+            "lineEnd": 27,
+            "quote": "交付时读取 [估值分析交付模板](references/估值分析交付模板.md)，按模板完成本专项成果"
+          }
+        }
+      ],
+      "evidenceTags": [
+        {
+          "type": "evidence",
+          "filePath": "skills/hehe-valuation-analysis/SKILL.md",
+          "lineStart": 6,
+          "lineEnd": 6,
+          "quote": "选择适用的可比公司或交易、DCF/FCFF/FCFE、SOTP、资产、股利或里程碑情景方法，建立可复算的企业价值或股权价值区间、调整桥、敏感性和隐含预期。"
+        },
+        {
+          "type": "evidence",
+          "filePath": "skills/hehe-valuation-analysis/SKILL.md",
+          "lineStart": 34,
+          "lineEnd": 34,
+          "quote": "用户要求完整、深度或系统研究，或本专项作为 hehe-industry-researcher 完整研究中的适用模块时，必须先形成独立完整专项报告"
+        }
+      ],
+      "analysisSource": "model",
+      "analysisNote": "来源：模型批量理解"
+    }
+  },
+  "reconciliation_report": {
+    "totalUnitCandidates": 17,
+    "classifiedNodesCount": 17,
+    "unclassifiedFiles": [
+      ".gitignore",
+      "LICENSE",
+      "README.md",
+      "docs/images/html-report-content.png",
+      "docs/images/html-report-cover.png",
+      "docs/images/html-report-summary.png",
+      "docs/images/report-chapter-20261025.png",
+      "docs/images/report-cover-20261025.png",
+      "docs/images/report-waterfall-20261025.png",
+      "release-manifest.json",
+      "scripts/validate_release.py"
+    ],
+    "roleCounts": {
+      "entry_router": 2,
+      "specialist": 15,
+      "delivery": 0,
+      "resource": 0,
+      "script": 0,
+      "config": 0,
+      "doc": 0,
+      "unknown": 0
+    },
+    "invalidEdgesCount": 0,
+    "allEdgeEndpointsExist": true,
+    "modelUnderstoodCount": 17,
+    "ruleFallbackCount": 0
+  },
+  "evidence_verification": {
+    "totalTags": 23,
+    "verifiedCount": 20,
+    "unverifiedCount": 3,
+    "verificationRate": 87,
+    "tags": [
+      {
+        "tag": {
+          "type": "evidence",
+          "filePath": "README.md",
+          "lineStart": 3,
+          "lineEnd": 3,
+          "quote": "一套由总入口统筹、13 个专项 Skill 协同执行的中文行业与企业研究工作流。"
+        },
+        "verified": true,
+        "reason": "证据文件与引用文本匹配一致"
+      },
+      {
+        "tag": {
+          "type": "evidence",
+          "filePath": "skills/hehe-business-model/SKILL.md",
+          "lineStart": 5,
+          "lineEnd": 5,
+          "quote": "盒子原创行业研究 Skill 组合中的商业模式分析专项。"
+        },
+        "verified": true,
+        "reason": "证据文件与引用文本匹配一致"
+      },
+      {
+        "tag": {
+          "type": "evidence",
+          "filePath": "skills/hehe-company-profile/SKILL.md",
+          "lineStart": 5,
+          "lineEnd": 5,
+          "quote": "建立一家企业或经营主体的可追溯经营画像"
+        },
+        "verified": true,
+        "reason": "证据文件与引用文本匹配一致"
+      },
+      {
+        "tag": {
+          "type": "evidence",
+          "filePath": "skills/hehe-competitive-landscape/SKILL.md",
+          "lineStart": 5,
+          "lineEnd": 5,
+          "quote": "行业研究梳理参与企业、份额、集中度及变化，按共同维度横向比较核心企业"
+        },
+        "verified": true,
+        "reason": "证据文件与引用文本匹配一致"
+      },
+      {
+        "tag": {
+          "type": "evidence",
+          "filePath": "skills/hehe-financial-analysis/SKILL.md",
+          "lineStart": 5,
+          "lineEnd": 6,
+          "quote": "重构并勾稽利润表、资产负债表和现金流量表，诊断增长、盈利、现金转换、资产质量、资本效率、债务与会计质量"
+        },
+        "verified": true,
+        "reason": "证据文件与引用文本匹配一致"
+      },
+      {
+        "tag": {
+          "type": "evidence",
+          "filePath": "skills/hehe-governance-capital-allocation/SKILL.md",
+          "lineStart": 5,
+          "lineEnd": 6,
+          "quote": "判断公司的实际控制权与决策机制、管理层和股东激励、少数股东保护、关联交易及资本配置历史质量"
+        },
+        "verified": true,
+        "reason": "证据文件与引用文本匹配一致"
+      },
+      {
+        "tag": {
+          "type": "evidence",
+          "filePath": "skills/hehe-industry-chain-map/SKILL.md",
+          "lineStart": 5,
+          "lineEnd": 5,
+          "quote": "梳理行业或企业所在链条的功能、角色、上下游关系与代表企业，分析成本、利润、瓶颈和技术替代"
+        },
+        "verified": true,
+        "reason": "证据文件与引用文本匹配一致"
+      },
+      {
+        "tag": {
+          "type": "evidence",
+          "filePath": "skills/hehe-industry-drivers/SKILL.md",
+          "lineStart": 5,
+          "lineEnd": 6,
+          "quote": "用于解释行业收入、销量、价格、利润、渗透率、供给或结构变化为何发生：先拆解需要解释的结果，再识别并核查需求、供给、价格与成本、技术、渠道、政策制度等驱动"
+        },
+        "verified": true,
+        "reason": "证据文件与引用文本匹配一致"
+      },
+      {
+        "tag": {
+          "type": "evidence",
+          "filePath": "skills/hehe-industry-pain-points/SKILL.md",
+          "lineStart": 4,
+          "lineEnd": 6,
+          "quote": "辨析不同参与者在明确任务、流程或产业节点上反复、持续，或在关键时点承担的时间、成本、收入、结果、风险或责任损失"
+        },
+        "verified": true,
+        "reason": "证据文件与引用文本匹配一致"
+      },
+      {
+        "tag": {
+          "type": "evidence",
+          "filePath": "skills/hehe-industry-researcher/SKILL.md",
+          "lineStart": 4,
+          "lineEnd": 6,
+          "quote": "负责把研究开题、公开信息搜索、材料审核、行业或企业分析、Markdown 成稿及 HTML 报告交付整合成一条完整路线"
+        },
+        "verified": true,
+        "reason": "证据文件与引用文本匹配一致"
+      },
+      {
+        "tag": {
+          "type": "evidence",
+          "filePath": "skills/hehe-investment-logic/SKILL.md",
+          "lineStart": 4,
+          "lineEnd": 8,
+          "quote": "分析行业机会、企业、项目、上市证券或具体交易是否值得投资、是否实际可进入"
+        },
+        "verified": true,
+        "reason": "证据文件与引用文本匹配一致"
+      },
+      {
+        "tag": {
+          "type": "evidence",
+          "filePath": "skills/hehe-market-sizing/SKILL.md",
+          "lineStart": 4,
+          "lineEnd": 6,
+          "quote": "按问题选择市场机会、交易经营、采购预算等方法，提供公式、参数、情景与敏感性分析"
+        },
+        "verified": false,
+        "reason": "在 skills/hehe-market-sizing/SKILL.md 中未找到对应原文"
+      },
+      {
+        "tag": {
+          "type": "evidence",
+          "filePath": "skills/hehe-pest-analysis/SKILL.md",
+          "lineStart": 4,
+          "lineEnd": 4,
+          "quote": "盒子原创行业研究 Skill 组合中的 PEST 外部环境分析专项。"
+        },
+        "verified": true,
+        "reason": "证据文件与引用文本匹配一致"
+      },
+      {
+        "tag": {
+          "type": "evidence",
+          "filePath": "skills/hehe-report-presentation/SKILL.md",
+          "lineStart": 4,
+          "lineEnd": 4,
+          "quote": "将已有商业计划书、行业与企业研究报告、用户研究报告或分页脚本制作成专业报告。"
+        },
+        "verified": true,
+        "reason": "证据文件与引用文本匹配一致"
+      },
+      {
+        "tag": {
+          "type": "evidence",
+          "filePath": "skills/hehe-report-writing/SKILL.md",
+          "lineStart": 4,
+          "lineEnd": 4,
+          "quote": "专业研究与咨询文稿写作、润色、审校及分页编排。"
+        },
+        "verified": true,
+        "reason": "证据文件与引用文本匹配一致"
+      },
+      {
+        "tag": {
+          "type": "evidence",
+          "filePath": "skills/hehe-trend-analysis/SKILL.md",
+          "lineStart": 4,
+          "lineEnd": 4,
+          "quote": "盒子原创行业研究 Skill 组合中的趋势分析专项。"
+        },
+        "verified": true,
+        "reason": "证据文件与引用文本匹配一致"
+      },
+      {
+        "tag": {
+          "type": "evidence",
+          "filePath": "skills/hehe-valuation-analysis/SKILL.md",
+          "lineStart": 6,
+          "lineEnd": 6,
+          "quote": "选择适用的可比公司或交易、DCF/FCFF/FCFE、SOTP、资产、股利或里程碑情景方法，建立可复算的企业价值或股权价值区间、调整桥、敏感性和隐含预期。"
+        },
+        "verified": true,
+        "reason": "证据文件与引用文本匹配一致"
+      },
+      {
+        "tag": {
+          "type": "evidence",
+          "filePath": "skills/hehe-valuation-analysis/SKILL.md",
+          "lineStart": 34,
+          "lineEnd": 34,
+          "quote": "用户要求完整、深度或系统研究，或本专项作为 hehe-industry-researcher 完整研究中的适用模块时，必须先形成独立完整专项报告"
+        },
+        "verified": false,
+        "reason": "在 skills/hehe-valuation-analysis/SKILL.md 中未找到对应原文"
+      },
+      {
+        "tag": {
+          "type": "evidence",
+          "filePath": "README.md",
+          "lineStart": 1,
+          "lineEnd": 1,
+          "quote": "# 盒盒行业研究技能包"
+        },
+        "verified": true,
+        "reason": "证据文件与引用文本匹配一致"
+      },
+      {
+        "tag": {
+          "type": "evidence",
+          "filePath": "README.md",
+          "lineStart": 3,
+          "lineEnd": 3,
+          "quote": "一套由总入口统筹、13 个专项 Skill 协同执行的中文行业与企业研究工作流。"
+        },
+        "verified": true,
+        "reason": "证据文件与引用文本匹配一致"
+      },
+      {
+        "tag": {
+          "type": "evidence",
+          "filePath": "skills/hehe-business-model/SKILL.md",
+          "lineStart": 5,
+          "lineEnd": 5,
+          "quote": "盒子原创行业研究 Skill 组合中的商业模式分析专项。"
+        },
+        "verified": true,
+        "reason": "证据文件与引用文本匹配一致"
+      },
+      {
+        "tag": {
+          "type": "evidence",
+          "filePath": "skills/hehe-valuation-analysis/SKILL.md",
+          "lineStart": 34,
+          "lineEnd": 34,
+          "quote": "用户要求完整、深度或系统研究，或本专项作为 hehe-industry-researcher 完整研究中的适用模块时，必须先形成独立完整专项报告"
+        },
+        "verified": false,
+        "reason": "在 skills/hehe-valuation-analysis/SKILL.md 中未找到对应原文"
+      },
+      {
+        "tag": {
+          "type": "evidence",
+          "filePath": "skills/hehe-industry-researcher/SKILL.md",
+          "lineStart": 4,
+          "lineEnd": 6,
+          "quote": "负责把研究开题、公开信息搜索、材料审核、行业或企业分析、Markdown 成稿及 HTML 报告交付整合成一条完整路线"
+        },
+        "verified": true,
+        "reason": "证据文件与引用文本匹配一致"
+      }
+    ]
+  },
+  "counterexamples": [],
+  "coverage_table": {
+    "overallCoveragePercentage": 20.2,
+    "files": [
+      {
+        "filePath": ".gitignore",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 1
+      },
+      {
+        "filePath": "LICENSE",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 1
+      },
+      {
+        "filePath": "README.md",
+        "status": "已读全文",
+        "linesRead": 561,
+        "totalLines": 561
+      },
+      {
+        "filePath": "docs/images/html-report-content.png",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 1
+      },
+      {
+        "filePath": "docs/images/html-report-cover.png",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 1
+      },
+      {
+        "filePath": "docs/images/html-report-summary.png",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 1
+      },
+      {
+        "filePath": "docs/images/report-chapter-20261025.png",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 1
+      },
+      {
+        "filePath": "docs/images/report-cover-20261025.png",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 1
+      },
+      {
+        "filePath": "docs/images/report-waterfall-20261025.png",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 1
+      },
+      {
+        "filePath": "release-manifest.json",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 269
+      },
+      {
+        "filePath": "scripts/validate_release.py",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 204
+      },
+      {
+        "filePath": "skills/hehe-business-model/SKILL.md",
+        "status": "已读全文",
+        "linesRead": 72,
+        "totalLines": 72
+      },
+      {
+        "filePath": "skills/hehe-business-model/references/专项工作流程.md",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 70
+      },
+      {
+        "filePath": "skills/hehe-business-model/references/商业模式分析交付模板.md",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 129
+      },
+      {
+        "filePath": "skills/hehe-business-model/references/商业模式核心分析方法.md",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 163
+      },
+      {
+        "filePath": "skills/hehe-business-model/references/商业模式计算方法与算例.md",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 134
+      },
+      {
+        "filePath": "skills/hehe-company-profile/SKILL.md",
+        "status": "已读全文",
+        "linesRead": 134,
+        "totalLines": 134
+      },
+      {
+        "filePath": "skills/hehe-company-profile/references/专项工作流程.md",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 74
+      },
+      {
+        "filePath": "skills/hehe-company-profile/references/公司底座与财务画像.md",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 74
+      },
+      {
+        "filePath": "skills/hehe-company-profile/references/公司画像交付模板.md",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 107
+      },
+      {
+        "filePath": "skills/hehe-competitive-landscape/SKILL.md",
+        "status": "已读全文",
+        "linesRead": 133,
+        "totalLines": 133
+      },
+      {
+        "filePath": "skills/hehe-competitive-landscape/agents/openai.yaml",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 5
+      },
+      {
+        "filePath": "skills/hehe-competitive-landscape/references/专项工作流程.md",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 79
+      },
+      {
+        "filePath": "skills/hehe-competitive-landscape/references/竞争定位图与能力矩阵.md",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 86
+      },
+      {
+        "filePath": "skills/hehe-competitive-landscape/references/竞争格局分析交付模板.md",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 95
+      },
+      {
+        "filePath": "skills/hehe-financial-analysis/SKILL.md",
+        "status": "已读全文",
+        "linesRead": 125,
+        "totalLines": 125
+      },
+      {
+        "filePath": "skills/hehe-financial-analysis/agents/openai.yaml",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 5
+      },
+      {
+        "filePath": "skills/hehe-financial-analysis/references/三表重构与预测模型.md",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 165
+      },
+      {
+        "filePath": "skills/hehe-financial-analysis/references/专项工作流程.md",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 69
+      },
+      {
+        "filePath": "skills/hehe-financial-analysis/references/企业财务诊断方法.md",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 220
+      },
+      {
+        "filePath": "skills/hehe-financial-analysis/references/会计质量与异常核查.md",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 133
+      },
+      {
+        "filePath": "skills/hehe-financial-analysis/references/无完整财报企业的财务分析.md",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 81
+      },
+      {
+        "filePath": "skills/hehe-financial-analysis/references/行业财务口径适配.md",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 141
+      },
+      {
+        "filePath": "skills/hehe-financial-analysis/references/财务分析交付模板.md",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 114
+      },
+      {
+        "filePath": "skills/hehe-financial-analysis/references/财务口径、公式与工作底表.md",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 291
+      },
+      {
+        "filePath": "skills/hehe-governance-capital-allocation/SKILL.md",
+        "status": "已读全文",
+        "linesRead": 232,
+        "totalLines": 232
+      },
+      {
+        "filePath": "skills/hehe-governance-capital-allocation/agents/openai.yaml",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 5
+      },
+      {
+        "filePath": "skills/hehe-governance-capital-allocation/references/专项工作流程.md",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 63
+      },
+      {
+        "filePath": "skills/hehe-governance-capital-allocation/references/治理与资本配置分析交付模板.md",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 92
+      },
+      {
+        "filePath": "skills/hehe-governance-capital-allocation/references/治理与资本配置分析底表.md",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 208
+      },
+      {
+        "filePath": "skills/hehe-industry-chain-map/SKILL.md",
+        "status": "已读全文",
+        "linesRead": 282,
+        "totalLines": 282
+      },
+      {
+        "filePath": "skills/hehe-industry-chain-map/assets/产业链图模板.json",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 31
+      },
+      {
+        "filePath": "skills/hehe-industry-chain-map/references/专项工作流程.md",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 81
+      },
+      {
+        "filePath": "skills/hehe-industry-chain-map/references/产业链分析交付模板.md",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 120
+      },
+      {
+        "filePath": "skills/hehe-industry-chain-map/references/产业链图绘制规范.md",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 94
+      },
+      {
+        "filePath": "skills/hehe-industry-chain-map/scripts/render_chain.py",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 316
+      },
+      {
+        "filePath": "skills/hehe-industry-chain-map/tests/test_render_chain.py",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 142
+      },
+      {
+        "filePath": "skills/hehe-industry-drivers/SKILL.md",
+        "status": "已读全文",
+        "linesRead": 134,
+        "totalLines": 134
+      },
+      {
+        "filePath": "skills/hehe-industry-drivers/agents/openai.yaml",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 5
+      },
+      {
+        "filePath": "skills/hehe-industry-drivers/references/专项工作流程.md",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 80
+      },
+      {
+        "filePath": "skills/hehe-industry-drivers/references/行业结果拆解与量化归因方法.md",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 65
+      },
+      {
+        "filePath": "skills/hehe-industry-drivers/references/行业驱动力分析交付模板.md",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 88
+      },
+      {
+        "filePath": "skills/hehe-industry-drivers/references/行业驱动力分析工作表.md",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 147
+      },
+      {
+        "filePath": "skills/hehe-industry-pain-points/SKILL.md",
+        "status": "已读全文",
+        "linesRead": 122,
+        "totalLines": 122
+      },
+      {
+        "filePath": "skills/hehe-industry-pain-points/agents/openai.yaml",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 5
+      },
+      {
+        "filePath": "skills/hehe-industry-pain-points/references/专项工作流程.md",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 79
+      },
+      {
+        "filePath": "skills/hehe-industry-pain-points/references/行业痛点分析交付模板.md",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 91
+      },
+      {
+        "filePath": "skills/hehe-industry-pain-points/references/行业痛点分析工作表.md",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 150
+      },
+      {
+        "filePath": "skills/hehe-industry-researcher/SKILL.md",
+        "status": "已读全文",
+        "linesRead": 155,
+        "totalLines": 155
+      },
+      {
+        "filePath": "skills/hehe-industry-researcher/agents/openai.yaml",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 5
+      },
+      {
+        "filePath": "skills/hehe-industry-researcher/assets/研究报告HTML模板.html",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 1
+      },
+      {
+        "filePath": "skills/hehe-industry-researcher/package-manifest.json",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 103
+      },
+      {
+        "filePath": "skills/hehe-industry-researcher/references/HTML报告交付规范.md",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 96
+      },
+      {
+        "filePath": "skills/hehe-industry-researcher/references/专项分析与交付流程.md",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 82
+      },
+      {
+        "filePath": "skills/hehe-industry-researcher/references/信息搜索流程.md",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 67
+      },
+      {
+        "filePath": "skills/hehe-industry-researcher/references/分析准备流程.md",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 63
+      },
+      {
+        "filePath": "skills/hehe-industry-researcher/references/最终交付流程.md",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 76
+      },
+      {
+        "filePath": "skills/hehe-industry-researcher/references/研究Skill职能结构.md",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 56
+      },
+      {
+        "filePath": "skills/hehe-industry-researcher/references/研究开题流程.md",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 56
+      },
+      {
+        "filePath": "skills/hehe-industry-researcher/references/研究项目目录模板.md",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 22
+      },
+      {
+        "filePath": "skills/hehe-industry-researcher/references/简单开题模板.md",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 48
+      },
+      {
+        "filePath": "skills/hehe-industry-researcher/scripts/build-html-report.py",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 288
+      },
+      {
+        "filePath": "skills/hehe-industry-researcher/scripts/validate-bundle.ps1",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 1
+      },
+      {
+        "filePath": "skills/hehe-investment-logic/SKILL.md",
+        "status": "已读全文",
+        "linesRead": 144,
+        "totalLines": 144
+      },
+      {
+        "filePath": "skills/hehe-investment-logic/agents/openai.yaml",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 5
+      },
+      {
+        "filePath": "skills/hehe-investment-logic/references/专项工作流程.md",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 66
+      },
+      {
+        "filePath": "skills/hehe-investment-logic/references/五类研究对象分析模式.md",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 86
+      },
+      {
+        "filePath": "skills/hehe-investment-logic/references/投资方式与交易路径.md",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 122
+      },
+      {
+        "filePath": "skills/hehe-investment-logic/references/投资逻辑交付模板.md",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 121
+      },
+      {
+        "filePath": "skills/hehe-investment-logic/references/投资逻辑分析方法.md",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 171
+      },
+      {
+        "filePath": "skills/hehe-market-sizing/SKILL.md",
+        "status": "已读全文",
+        "linesRead": 89,
+        "totalLines": 89
+      },
+      {
+        "filePath": "skills/hehe-market-sizing/agents/openai.yaml",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 5
+      },
+      {
+        "filePath": "skills/hehe-market-sizing/references/专项工作流程.md",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 70
+      },
+      {
+        "filePath": "skills/hehe-market-sizing/references/宏观与行业统计测算底数.md",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 81
+      },
+      {
+        "filePath": "skills/hehe-market-sizing/references/市场机会与口径术语.md",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 56
+      },
+      {
+        "filePath": "skills/hehe-market-sizing/references/市场规模测算交付模板.md",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 176
+      },
+      {
+        "filePath": "skills/hehe-market-sizing/references/测算参考示例.md",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 348
+      },
+      {
+        "filePath": "skills/hehe-market-sizing/references/测算方法详解.md",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 175
+      },
+      {
+        "filePath": "skills/hehe-pest-analysis/SKILL.md",
+        "status": "已读全文",
+        "linesRead": 107,
+        "totalLines": 107
+      },
+      {
+        "filePath": "skills/hehe-pest-analysis/references/E_经济环境分析方法.md",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 43
+      },
+      {
+        "filePath": "skills/hehe-pest-analysis/references/PEST外部环境分析交付模板.md",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 99
+      },
+      {
+        "filePath": "skills/hehe-pest-analysis/references/P_政策与监管分析方法.md",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 103
+      },
+      {
+        "filePath": "skills/hehe-pest-analysis/references/S_社会环境分析方法.md",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 37
+      },
+      {
+        "filePath": "skills/hehe-pest-analysis/references/T_技术环境分析方法.md",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 38
+      },
+      {
+        "filePath": "skills/hehe-pest-analysis/references/专项工作流程.md",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 66
+      },
+      {
+        "filePath": "skills/hehe-report-presentation/SKILL.md",
+        "status": "已读全文",
+        "linesRead": 41,
+        "totalLines": 41
+      },
+      {
+        "filePath": "skills/hehe-report-presentation/agents/openai.yaml",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 5
+      },
+      {
+        "filePath": "skills/hehe-report-presentation/assets/business.css",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 1
+      },
+      {
+        "filePath": "skills/hehe-report-presentation/assets/business_layouts.json",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 460
+      },
+      {
+        "filePath": "skills/hehe-report-presentation/assets/cover_chapter.json",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 27
+      },
+      {
+        "filePath": "skills/hehe-report-presentation/assets/example.json",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 439
+      },
+      {
+        "filePath": "skills/hehe-report-presentation/assets/modes.css",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 1
+      },
+      {
+        "filePath": "skills/hehe-report-presentation/assets/report.html",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 1
+      },
+      {
+        "filePath": "skills/hehe-report-presentation/assets/scroll-sidebar.css",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 1
+      },
+      {
+        "filePath": "skills/hehe-report-presentation/assets/scroll-sidebar.js",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 47
+      },
+      {
+        "filePath": "skills/hehe-report-presentation/references/HTML制作与核验.md",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 46
+      },
+      {
+        "filePath": "skills/hehe-report-presentation/references/可编辑PPT交付.md",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 36
+      },
+      {
+        "filePath": "skills/hehe-report-presentation/references/商业报告视觉编排.md",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 36
+      },
+      {
+        "filePath": "skills/hehe-report-presentation/references/图形优先与生成检查.md",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 81
+      },
+      {
+        "filePath": "skills/hehe-report-presentation/references/多形态交付.md",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 37
+      },
+      {
+        "filePath": "skills/hehe-report-presentation/references/版式与组件选用.md",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 55
+      },
+      {
+        "filePath": "skills/hehe-report-presentation/scripts/business_components.py",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 104
+      },
+      {
+        "filePath": "skills/hehe-report-presentation/scripts/components.py",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 73
+      },
+      {
+        "filePath": "skills/hehe-report-presentation/scripts/export_and_check.py",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 104
+      },
+      {
+        "filePath": "skills/hehe-report-presentation/scripts/export_pptx.py",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 264
+      },
+      {
+        "filePath": "skills/hehe-report-presentation/scripts/markdown_source.py",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 68
+      },
+      {
+        "filePath": "skills/hehe-report-presentation/scripts/render_report.py",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 96
+      },
+      {
+        "filePath": "skills/hehe-report-presentation/scripts/test_visual_plan.py",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 144
+      },
+      {
+        "filePath": "skills/hehe-report-presentation/scripts/visual_plan.py",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 192
+      },
+      {
+        "filePath": "skills/hehe-report-presentation/依赖清单.md",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 72
+      },
+      {
+        "filePath": "skills/hehe-report-writing/SKILL.md",
+        "status": "已读全文",
+        "linesRead": 129,
+        "totalLines": 129
+      },
+      {
+        "filePath": "skills/hehe-report-writing/agents/openai.yaml",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 5
+      },
+      {
+        "filePath": "skills/hehe-report-writing/references/专业编辑方法.md",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 38
+      },
+      {
+        "filePath": "skills/hehe-report-writing/references/分页编排/company.md",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 57
+      },
+      {
+        "filePath": "skills/hehe-report-writing/references/分页编排/industry.md",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 58
+      },
+      {
+        "filePath": "skills/hehe-report-writing/references/分页编排/integrated.md",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 69
+      },
+      {
+        "filePath": "skills/hehe-report-writing/references/分页编排/page-script-schema.md",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 82
+      },
+      {
+        "filePath": "skills/hehe-report-writing/references/分页编排/user.md",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 76
+      },
+      {
+        "filePath": "skills/hehe-report-writing/references/分页编排/分页与内容交接.md",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 45
+      },
+      {
+        "filePath": "skills/hehe-report-writing/references/分页编排与交付.md",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 135
+      },
+      {
+        "filePath": "skills/hehe-report-writing/references/句子与段落编辑.md",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 66
+      },
+      {
+        "filePath": "skills/hehe-report-writing/references/商业文稿成文与页面叙事.md",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 93
+      },
+      {
+        "filePath": "skills/hehe-report-writing/references/改写示例.md",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 38
+      },
+      {
+        "filePath": "skills/hehe-report-writing/references/文本报告独立撰写.md",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 50
+      },
+      {
+        "filePath": "skills/hehe-report-writing/references/研究报告编辑.md",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 26
+      },
+      {
+        "filePath": "skills/hehe-report-writing/references/计划书编辑.md",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 34
+      },
+      {
+        "filePath": "skills/hehe-trend-analysis/SKILL.md",
+        "status": "已读全文",
+        "linesRead": 193,
+        "totalLines": 193
+      },
+      {
+        "filePath": "skills/hehe-trend-analysis/agents/openai.yaml",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 8
+      },
+      {
+        "filePath": "skills/hehe-trend-analysis/references/专项工作流程.md",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 80
+      },
+      {
+        "filePath": "skills/hehe-trend-analysis/references/趋势分析交付模板.md",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 90
+      },
+      {
+        "filePath": "skills/hehe-valuation-analysis/SKILL.md",
+        "status": "已读全文",
+        "linesRead": 261,
+        "totalLines": 261
+      },
+      {
+        "filePath": "skills/hehe-valuation-analysis/agents/openai.yaml",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 5
+      },
+      {
+        "filePath": "skills/hehe-valuation-analysis/references/专项工作流程.md",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 64
+      },
+      {
+        "filePath": "skills/hehe-valuation-analysis/references/估值分析交付模板.md",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 118
+      },
+      {
+        "filePath": "skills/hehe-valuation-analysis/references/估值方法、公式与工作底表.md",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 331
+      },
+      {
+        "filePath": "skills/hehe-valuation-analysis/references/非上市企业商业尽调估值.md",
+        "status": "未读",
+        "linesRead": 0,
+        "totalLines": 138
+      }
+    ]
+  },
+  "intent_probes": [
+    {
+      "question": "该项目主要面向哪类使用者？",
+      "answerFromBlueprint": "行业研究员、企业战略分析师、投研人员。",
+      "answerFromRawFiles": "无法确定",
+      "agrees": null,
+      "status": "需人工比对",
+      "notes": "双路回答已生成，系统未执行自动语义一致性裁决（无法判断）"
+    },
+    {
+      "question": "系统是否声明了明确的非目标 (Non-goals)？",
+      "answerFromBlueprint": "是，声明的非目标为：非自动化办公任务、非通用搜索引擎、非即时新闻资讯推送。",
+      "answerFromRawFiles": "无法确定",
+      "agrees": null,
+      "status": "需人工比对",
+      "notes": "双路回答已生成，系统未执行自动语义一致性裁决（无法判断）"
+    },
+    {
+      "question": "项目的核心交付物与预期产出格式是什么？",
+      "answerFromBlueprint": "核心交付物是专业报告，预期产出为端到端的中文行业与企业研究工作流。",
+      "answerFromRawFiles": "无法确定",
+      "agrees": null,
+      "status": "需人工比对",
+      "notes": "双路回答已生成，系统未执行自动语义一致性裁决（无法判断）"
+    }
+  ],
+  "modelCallsCount": 8,
+  "synthesisStatus": "model",
+  "synthesisNote": "来源：模型合成"
+}

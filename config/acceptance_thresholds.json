@@ -1,0 +1,69 @@
+{
+  "description": "验收测试与自评分机械判定阈值配置（集中管理，程序不得自行放宽）",
+  "thresholds": {
+    "A0_forbidden_max_hits": {
+      "value": 0,
+      "label": "A0(a) 通用违禁词最大允许命中数"
+    },
+    "A0_project_identifier_max_hits": {
+      "value": 0,
+      "label": "A0(b) 被测项目标识符在自身源码中最大允许命中数"
+    },
+    "A1_min_file_count": {
+      "value": 1,
+      "label": "A1 导入项目最少文件数"
+    },
+    "A2_require_exact_hash_match": {
+      "value": true,
+      "label": "A2 两次确定性清单提取 SHA256 必须 100% 一致"
+    },
+    "A3_require_all_edge_endpoints_exist": {
+      "value": true,
+      "label": "A3 拓扑边端点 100% 合法存在"
+    },
+    "A4_require_closed_vocabulary_100pct": {
+      "value": true,
+      "label": "A4 角色与边类型 100% 符合封闭词汇表"
+    },
+    "A5_min_evidence_verification_rate": {
+      "value": 100,
+      "label": "A5 蓝图强证据引用校验率最低通过阈值 (%)"
+    },
+    "A6_require_must_precede_verified_quote_100pct": {
+      "value": true,
+      "label": "A6 所有 must_precede 边必须 100% 具备已校验强证据引文"
+    },
+    "A7_max_l2_promotion_hits": {
+      "value": 0,
+      "label": "A7 L1 节点中混入 L2 内部步骤的最大允许次数"
+    },
+    "A9_require_unit_verdict_100pct": {
+      "value": true,
+      "label": "A9 单元判定与能力来源声明 100% 完整"
+    },
+    "A10_require_zero_embedded_secrets": {
+      "value": true,
+      "label": "A10 DRY-RUN 校验通过且明文密钥为 0"
+    },
+    "A11_require_completed_and_hash_match": {
+      "value": true,
+      "label": "A11 任务状态 completed、存在执行步骤且产物 SHA256 匹配"
+    },
+    "A12_require_independent_payload": {
+      "value": true,
+      "label": "A12 验证器 Payload 已落盘且不含执行器推理字段"
+    },
+    "A14_max_non_chinese_ui_hits": {
+      "value": 0,
+      "label": "A14 面向用户的界面字符串中非中文自然语言单词最大允许命中数"
+    },
+    "A15_max_residual_fake_patterns": {
+      "value": 0,
+      "label": "A15 静态写死结果模式及 R1 残留问题最大允许命中数"
+    },
+    "self_assessment_min_projects_for_score_4": {
+      "value": 2,
+      "label": "自评分达到 4 分所需至少完成测试的独立项目数"
+    }
+  }
+}

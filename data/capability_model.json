@@ -1,0 +1,119 @@
+{
+  "web_search": {
+    "key": "web_search",
+    "name": "Web 实时搜索检索",
+    "category": "外部交互与 Grounding",
+    "status": "unknown",
+    "source": "probe",
+    "timestamp": "2026-11-13T07:31:55.783Z",
+    "probe_result": "未实现：尚未实现 Web 实时搜索检索 (web_search) 的真实探针检测，状态保持未知"
+  },
+  "url_fetch": {
+    "key": "url_fetch",
+    "name": "URL 网页内容抓取解析",
+    "category": "外部交互与 Grounding",
+    "status": "unknown",
+    "source": "probe",
+    "timestamp": "2026-11-13T07:31:55.785Z",
+    "probe_result": "未实现：尚未实现 URL 网页内容抓取解析 (url_fetch) 的真实探针检测，状态保持未知"
+  },
+  "code_execution": {
+    "key": "code_execution",
+    "name": "代码运行与隔离沙盒",
+    "category": "计算与运行时",
+    "status": "unknown",
+    "source": "probe",
+    "timestamp": "2026-11-13T07:31:55.785Z",
+    "probe_result": "未实现：尚未实现 代码运行与隔离沙盒 (code_execution) 的真实探针检测，状态保持未知"
+  },
+  "filesystem_persist": {
+    "key": "filesystem_persist",
+    "name": "文件系统持久化存储",
+    "category": "存储与 I/O",
+    "status": "unknown",
+    "source": "probe",
+    "timestamp": "2026-11-13T07:31:55.786Z",
+    "probe_result": "未实现：尚未实现 文件系统持久化存储 (filesystem_persist) 的真实探针检测，状态保持未知"
+  },
+  "long_output": {
+    "key": "long_output",
+    "name": "长上下文输出生成",
+    "category": "模型与推断",
+    "status": "unknown",
+    "source": "probe",
+    "timestamp": "2026-11-13T07:31:55.786Z",
+    "probe_result": "未实现：尚未实现 长上下文输出生成 (long_output) 的真实探针检测，状态保持未知"
+  },
+  "structured_output": {
+    "key": "structured_output",
+    "name": "结构化 JSON Schema 约束输出",
+    "category": "模型与推断",
+    "status": "supported",
+    "source": "probe",
+    "timestamp": "2026-11-13T07:31:55.786Z",
+    "probe_result": "探针成功: 结构化 JSON 输出校验通过 ({\"ok\": true})"
+  },
+  "binary_file_read": {
+    "key": "binary_file_read",
+    "name": "多模态/二进制文件解析",
+    "category": "存储与 I/O",
+    "status": "unknown",
+    "source": "probe",
+    "timestamp": "2026-11-13T07:31:56.715Z",
+    "probe_result": "未实现：尚未实现 多模态/二进制文件解析 (binary_file_read) 的真实探针检测，状态保持未知"
+  },
+  "gpu": {
+    "key": "gpu",
+    "name": "本地硬件 GPU 加速指令",
+    "category": "计算与运行时",
+    "status": "unknown",
+    "source": "probe",
+    "timestamp": "2026-11-13T07:31:56.716Z",
+    "probe_result": "未实现：尚未实现 本地硬件 GPU 加速指令 (gpu) 的真实探针检测，状态保持未知"
+  },
+  "container_runtime": {
+    "key": "container_runtime",
+    "name": "Root 特权 Docker 容器",
+    "category": "计算与运行时",
+    "status": "unknown",
+    "source": "probe",
+    "timestamp": "2026-11-13T07:31:56.716Z",
+    "probe_result": "未实现：尚未实现 Root 特权 Docker 容器 (container_runtime) 的真实探针检测，状态保持未知"
+  },
+  "background_jobs": {
+    "key": "background_jobs",
+    "name": "守护进程与常驻后台任务",
+    "category": "计算与运行时",
+    "status": "unknown",
+    "source": "probe",
+    "timestamp": "2026-11-13T07:31:56.716Z",
+    "probe_result": "未实现：尚未实现 守护进程与常驻后台任务 (background_jobs) 的真实探针检测，状态保持未知"
+  },
+  "scheduler": {
+    "key": "scheduler",
+    "name": "独立 Cron 定时任务服务",
+    "category": "计算与运行时",
+    "status": "unknown",
+    "source": "probe",
+    "timestamp": "2026-11-13T07:31:56.717Z",
+    "probe_result": "未实现：尚未实现 独立 Cron 定时任务服务 (scheduler) 的真实探针检测，状态保持未知"
+  },
+  "remote_mcp": {
+    "key": "remote_mcp",
+    "name": "远程 MCP (Model Context Protocol)",
+    "category": "外部交互与 Grounding",
+    "status": "unknown",
+    "source": "probe",
+    "timestamp": "2026-11-13T07:31:56.717Z",
+    "probe_result": "未实现：尚未实现 远程 MCP (Model Context Protocol) (remote_mcp) 的真实探针检测，状态保持未知"
+  },
+  "ui_hosting": {
+    "key": "ui_hosting",
+    "name": "客户端 Web 交互与界面宿主",
+    "category": "前端与交付",
+    "status": "unknown",
+    "source": "probe",
+    "timestamp": "2026-11-13T07:31:56.717Z",
+    "probe_result": "未实现：尚未实现 客户端 Web 交互与界面宿主 (ui_hosting) 的真实探针检测，状态保持未知"
+  }
+}
